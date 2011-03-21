@@ -1,6 +1,8 @@
 MBrowser7::Application.routes.draw do
+  match "tags" => 'tags#index'
+  match "tags/:id" => 'tags#show'
   resources :movies
-
+  match "movies/:id/thumbs" => 'movies#thumbs', :as => 'movie_thumbs'
   match 'dropbox' => 'dropbox#show'
   match 'add' => 'dropbox#add'
   match 'add_all' => 'dropbox#add_all'

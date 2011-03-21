@@ -30,6 +30,12 @@
     </requirement>
     <requirement>
       <requirement>
+        <dependency name="jquery-rails" version="0.2.6" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
+      </requirement>
+      <source from="Gemfile" />
+    </requirement>
+    <requirement>
+      <requirement>
         <dependency name="rails" version="3.0.5" bound="EQUAL" git="false" path="false" doRequire="true" />
       </requirement>
       <source from="Gemfile" />
@@ -78,11 +84,12 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] delayed_job (v2.1.2, C:/Ruby187/lib/ruby/gems/1.8/gems/delayed_job-2.1.2)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] daemons (v1.1.0, C:/Ruby187/lib/ruby/gems/1.8/gems/daemons-1.1.0)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] will_paginate (v3.0.pre2, C:/Ruby187/lib/ruby/gems/1.8/gems/will_paginate-3.0.pre2)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] thor (v0.14.6, C:/Ruby187/lib/ruby/gems/1.8/gems/thor-0.14.6)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] jquery-rails (v0.2.7, C:/Ruby187/lib/ruby/gems/1.8/gems/jquery-rails-0.2.7)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] rake (v0.8.7, C:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.8.7)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] rack (v1.2.2, C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.2.2)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] erubis (v2.6.6, C:/Ruby187/lib/ruby/gems/1.8/gems/erubis-2.6.6)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] arel (v2.0.9, C:/Ruby187/lib/ruby/gems/1.8/gems/arel-2.0.9)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] thor (v0.14.6, C:/Ruby187/lib/ruby/gems/1.8/gems/thor-0.14.6)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] tzinfo (v0.3.25, C:/Ruby187/lib/ruby/gems/1.8/gems/tzinfo-0.3.25)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] polyglot (v0.3.1, C:/Ruby187/lib/ruby/gems/1.8/gems/polyglot-0.3.1)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] mail (v2.2.15, C:/Ruby187/lib/ruby/gems/1.8/gems/mail-2.2.15)" level="application" />

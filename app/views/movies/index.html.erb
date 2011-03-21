@@ -1,9 +1,57 @@
-<h1>Listing movies</h1>
+<script type="text/javascript" charset="utf-8">
+$(document).ready(function()
+{
+    $('#content a[rel]').each(function()
+   {
+      $(this).qtip(
+      {
+         content: {
+            // Set the text to an image HTML string with the correct src URL to the loading image you want to use
+            text: '<img class="throbber" src="/projects/qtip/images/throbber.gif" alt="Loading..." />',
+            url: $(this).attr('rel'), // Use the rel attribute of each element for the url to load
+            title: {
+               text: $(this).attr('name'), // Give the tooltip a title using each elements text
+               button: 'Close' // Show a close link in the title
+            }
+         },
+         position: {
+            corner: {
+               target: 'bottomMiddle', // Position the tooltip above the link
+               tooltip: 'topMiddle'
+            },
+            adjust: {
+               screen: true // Keep the tooltip on-screen at all times
+            }
+         },
+         show: {
+            when: 'click',
+            solo: true // Only show one tooltip at a time
+         },
+         hide: 'unfocus',
+         style: {
+            tip: true, // Apply a speech bubble tip to the tooltip at the designated tooltip corner
+            border: {
+               width: 0,
+               radius: 4
+            },
+            name: 'light', // Use the default light style
+            width: 570 // Set the tooltip width
+         }
+      })
+   });
+});
+  </script>
 
+
+
+<h1>Listing movies</h1>
+<div id="content">
 <% @movies.each_with_index do |movie,i| %>
     <div class="rounded-corners g160" style="height:200px">
-    <h3 style="text-align:center"><%= link_to truncate(movie.name, :length => 15,:omission =>  "..."), edit_movie_path(movie) %></h3>
-      <%= unless movie.thumbnails[2].nil? then link_to image_tag("#{movie.thumbnails[2].big_path}", :width => 145, :height => 90), edit_movie_path(movie) end %>
+    <h3 style="text-align:center"><%= link_to truncate(movie.name, :length => 12,:omission =>  "..."), edit_movie_path(movie) %></h3>
+      <% unless movie.thumbnails[2].nil? %>
+          <a href="#" rel="<%= movie_thumbs_path(movie) %>" name="<%= movie.name %>"><%=  image_tag("#{movie.thumbnails[2].big_path}", :width => 145, :height => 90) %></a>
+      <% end %>
       <div class="g80 inside">
         <% l = movie.fancy_length %>
         <% unless l[:hour] == "0" %>
@@ -24,7 +72,7 @@
       <div class="clear">&nbsp;</div>
     <% end %>
 <% end %>
-
+</div>
 
 <div class="clear"></div>
 <%= will_paginate @movies %>

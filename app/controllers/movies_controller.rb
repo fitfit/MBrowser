@@ -19,10 +19,18 @@ class MoviesController < ApplicationController
       format.html # show.html.erb
       format.xml  { render :xml => @movie }
       format.js {
-        if params[:regenerate] then @movie.delay.generate_thumbnail end
-        render :nothing
+        if params[:regenerate]
+          @movie.delay.generate_thumbnail
+          render :nothing
+        end
+        
       }
     end
+  end
+
+  def thumbs
+    @movie = Movie.find(params[:id])
+    render :partial => 'thumbnails'
   end
 
   # GET /movies/new
