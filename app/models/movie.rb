@@ -4,6 +4,7 @@ class Movie < ActiveRecord::Base
   acts_as_taggable
 
   def fancy_length
+    unless self.length.nil?
     h = (self.length/3600).to_i
     m = ((self.length - h*3600)/60).to_i
     s = (self.length)%60
@@ -16,6 +17,10 @@ class Movie < ActiveRecord::Base
         s.to_s + " sec"
       end
     end
+    else
+      "Working..."
+    end
+    
   end
 
   def generate_thumbnail

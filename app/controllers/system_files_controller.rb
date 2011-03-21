@@ -14,11 +14,8 @@ class SystemFilesController < ApplicationController
   # GET /system_files/1.xml
   def show
     @system_file = SystemFile.find(params[:id])
+    Thread.new{system("C://Program Files//VideoLAN//VLC//VLC.exe #{File.expand_path(@system_file.path)}")}
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @system_file }
-    end
   end
 
   # GET /system_files/new

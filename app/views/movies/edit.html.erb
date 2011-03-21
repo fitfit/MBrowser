@@ -5,5 +5,7 @@
 
 <% @movie.system_files.each do |f| %>
  <a href="<%="file:///"+File.expand_path(f.path)%>" target ="_blank">Open <%= f.name  %></a>
+    <%= link_to 'Open in VLC', system_file_path(f), :remote => true %>
 <% end %>
+
 <%= link_to 'Back', movies_path %>
