@@ -9,5 +9,6 @@ div.rounded-corners {
     -khtml-border-radius: 10px;
     border-radius: 10px;
     padding: 3px;
+    padding-bottom:10px;
 
 }
