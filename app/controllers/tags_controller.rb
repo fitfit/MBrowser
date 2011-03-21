@@ -4,6 +4,8 @@ class TagsController < ApplicationController
   end
 
   def show
+    @movies = Movie.tagged_with(params[:id]).paginate :page => params[:page], :per_page => 24
+    
   end
 
 end
