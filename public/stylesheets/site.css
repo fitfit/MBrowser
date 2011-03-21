@@ -2,13 +2,13 @@ a.hover{background-color:transparent}
 div.rounded-corners {
     border-color: black;
     border-width: 1px;
-    border-style:outset;
-    border-spacing:2px;
-     -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -khtml-border-radius: 10px;
-    border-radius: 10px;
-    padding: 3px;
-    padding-bottom:10px;
-
+    border-style:solid;
+     -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
 }
+body {background-color:#333;}
+.main{background-color:#fff;}
+.g160{height:200px;margin-left:9px}
+.clear{height:10px;}

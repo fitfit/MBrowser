@@ -33,7 +33,7 @@ class DropboxController < ApplicationController
         sf = process_file(dir+ "/" + f)
         Movie.create(:name => sf.original_name, :system_files => [sf]).delay.generate_thumbnail
       else if not File.directory?(f)
-        reject_file(f)
+        reject_file(dir+ "/" +f)
            end
       end
       
