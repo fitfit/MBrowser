@@ -8,19 +8,10 @@ class Movie < ActiveRecord::Base
     h = (self.length/3600).to_i
     m = ((self.length - h*3600)/60).to_i
     s = (self.length)%60
-    unless h == 0
-    h.to_s + " hours " + m.to_s + " min " + s.to_s + " sec"
-    else
-      unless m == 0
-        m.to_s + " min " + m.to_s + " sec"
-      else
-        s.to_s + " sec"
-      end
-    end
+    {:hour => h.to_s,:min => m.to_s,:sec => s.to_s}
     else
       "Working..."
     end
-    
   end
 
   def generate_thumbnail

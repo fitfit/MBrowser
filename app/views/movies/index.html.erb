@@ -1,11 +1,26 @@
 <h1>Listing movies</h1>
 
 <% @movies.each do |movie| %>
-    <div class="g160">
-    <%= link_to movie.name, edit_movie_path(movie) %><br>
-    <%= movie.fancy_length %><br>
-    <%= unless movie.thumbnails[2].nil? then image_tag "#{movie.thumbnails[2].big_path}", :width => 150 end %>
-    <%= link_to 'Destroy', movie, :confirm => 'Are you sure?', :method => :delete %>
+    <div class="g160" style="height:200px">
+    <h3><%= link_to truncate(movie.name, :length => 15,:omission =>  "..."), edit_movie_path(movie) %></h3>
+      <%= unless movie.thumbnails[2].nil? then link_to image_tag("#{movie.thumbnails[2].big_path}", :width => 150), edit_movie_path(movie) end %>
+      <div class="g80 inside" style="height:20px">
+        <% l = movie.fancy_length %>
+        <% unless l[:hour] == "0" %>
+        <h2 style="display:inline"><%= l[:hour] %></h2>H<br>
+            <% end %>
+        <% unless l[:min] == "0" %>
+        <h2 style="display:inline"><%= l[:min] %></h2>M<br>
+            <% end %>
+            <% unless l[:sec] == "0" %>
+        <h2 style="display:inline"><%= l[:sec] %></h2>S<br>
+            <% end %>
+      </div>
+      <div class="g80" style="height:20px">
+    <%= link_to image_tag("vlc.png"), system_file_path(movie.system_files.first), :remote => true %>
+      </div>
+
+
   </div>
 <% end %>
 

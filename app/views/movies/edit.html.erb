@@ -8,4 +8,6 @@
     <%= link_to 'Open in VLC', system_file_path(f), :remote => true %>
 <% end %>
 
+<%= link_to 'Destroy', @movie, :confirm => 'Are you sure?', :method => :delete %>
+
 <%= link_to 'Back', movies_path %>
