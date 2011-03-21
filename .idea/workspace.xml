@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b8a98e3f-1060-4f79-b505-8dc70d58a075" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/dropbox_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/dropbox_controller.rb" />
     </list>
     <ignored path="MBrowser7.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,10 +27,10 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" showNonProject="false" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/movies/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="47" selection-start="848" selection-end="848" vertical-scroll-proportion="0.44973546">
+            <state line="28" column="24" selection-start="1237" selection-end="1237" vertical-scroll-proportion="-18.307692">
               <folding />
             </state>
           </provider>
@@ -53,10 +54,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dropbox_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="dropbox_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/dropbox_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="30" selection-start="963" selection-end="963" vertical-scroll-proportion="0.0">
+            <state line="53" column="53" selection-start="1466" selection-end="1466" vertical-scroll-proportion="1.1989882">
               <folding />
             </state>
           </provider>
@@ -152,10 +153,10 @@
         <option value="$PROJECT_DIR$/public/stylesheets/typography-min.css" />
         <option value="$PROJECT_DIR$/public/stylesheets/formtastic_changes.css" />
         <option value="$PROJECT_DIR$/public/stylesheets/golden.css" />
-        <option value="$PROJECT_DIR$/app/controllers/dropbox_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/public/stylesheets/site.css" />
         <option value="$PROJECT_DIR$/app/views/movies/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/dropbox_controller.rb" />
       </list>
     </option>
   </component>
@@ -834,13 +835,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/dropbox_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="30" selection-start="963" selection-end="963" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="22" selection-start="277" selection-end="277" vertical-scroll-proportion="-5.230769">
@@ -864,7 +858,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/movies/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="47" selection-start="848" selection-end="848" vertical-scroll-proportion="0.44973546">
+        <state line="28" column="24" selection-start="1237" selection-end="1237" vertical-scroll-proportion="-18.307692">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/dropbox_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="53" selection-start="1466" selection-end="1466" vertical-scroll-proportion="1.1989882">
           <folding />
         </state>
       </provider>

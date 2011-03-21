@@ -29,10 +29,10 @@ class DropboxController < ApplicationController
   def add_all
     dir = params[:dir] || './dropbox'
     Dir.new(dir).entries.each do |f|
-      if not File.directory?(f) and ACCEPTED_EXT.include? File.extname(f)
+      if not File.directory?(dir+ "/" + f) and ACCEPTED_EXT.include? File.extname(f)
         sf = process_file(dir+ "/" + f)
         Movie.create(:name => sf.original_name, :system_files => [sf]).delay.generate_thumbnail
-      else if not File.directory?(f)
+      else unless File.directory?(dir+ "/" + f)
         reject_file(dir+ "/" +f)
            end
       end
@@ -51,7 +51,7 @@ class DropboxController < ApplicationController
   end
 
   def reject_file(file)
-    FileUtils.mv(file,"rejected/"+file)
+    FileUtils.mv(file,"rejected/"+File.basename(file))
   end
 
 
