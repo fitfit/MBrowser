@@ -2,7 +2,7 @@
 db/*.sqlite3
 log/*.log
 tmp/
-public/library/*
-dropbox/*
-bin/*
+public/library/*.*
+dropbox/*.*
+bin/*.*
 ConvertLog.txt
