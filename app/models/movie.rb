@@ -31,7 +31,7 @@ class Movie < ActiveRecord::Base
       h = (self.length*0.1*i/3600).to_i
       m = ((self.length - h*3600)*0.1*i/60).to_i
       s = (self.length*0.1*i)%60
-      `\"./bin/ffmpeg.exe\" 2>> ConvertLog.txt -ss #{h}:#{m}:#{s} -t 1 -s 400x300  -i #{f.path} -f image2 #{new_path + "_t" + i.to_s + ".jpg"}`
+      `\"./bin/ffmpeg.exe\" 2>> ConvertLog.txt -ss #{h}:#{m}:#{s} -s 400x300  -i #{f.path} -f image2 #{new_path + "_t" + i.to_s + ".jpg"}`
     self.thumbnails << Thumbnail.create(:order => i, :system_files => [SystemFile.create(:original_name => n.split('.')[0..-2].join('.') +"_thumb" +i.to_s , :name => n.split('.')[0..-2].join('.') + "_t" + i.to_s, :file_type => "jpg",:path => new_path + "_t" + i.to_s + ".jpg")])
     end
 
