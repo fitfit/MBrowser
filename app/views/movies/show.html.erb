@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @movie.name %>
+</p>
+
+<p>
+  <b>Length:</b>
+  <%= @movie.length %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @movie.description %>
+</p>
+
+<p>
+  <b>Thumbnails:</b>
+
+<% @movie.thumbnails.each_with_index do |t, i| %>
+    <% if i%5 == 0 %>
+        </br>
+    <% end %>
+    <%= image_tag "#{t.big_path}", :width => 150 %>
+
+    <% end %>
+  </p>
+</br>
+<%= link_to 'Regenerate', movie_path(@movie, :regenerate => true), :remote => true %>
+
+<%= link_to 'Edit', edit_movie_path(@movie) %> |
+<%= link_to 'Back', movies_path %>

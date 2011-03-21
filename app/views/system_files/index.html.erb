@@ -1,0 +1,18 @@
+<h1>Listing system_files</h1>
+
+<table>
+  <tr>
+    <th>Original name</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @system_files.each do |system_file| %>
+  <tr>
+    <td><%= system_file.original_name %></td>
+    <td><%= link_to 'Destroy', system_file, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />

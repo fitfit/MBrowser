@@ -1,0 +1,12 @@
+<h1>Dropbox</h1>
+<h2><%= link_to "Process Everything!",{ :action => 'add_all', :dir => params[:dir]}, :remote => true %></h2>
+<% @files.each do |f| %>
+    <% if File.directory?(f) %>
+        <%= link_to f, :controller => "dropbox", :action => 'show', :dir => f  %>
+        <br>
+    <% else %>
+
+        <%= link_to f, :controller => "dropbox", :action => 'add', :file => f %>
+        <br>
+    <% end %>
+<% end %>

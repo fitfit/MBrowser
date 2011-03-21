@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Original name:</b>
+  <%= @system_file.original_name %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @system_file.name %>
+</p>
+
+<p>
+  <b>File type:</b>
+  <%= @system_file.file_type %>
+</p>
+
+<p>
+  <b>Path:</b>
+  <%= @system_file.path %>
+</p>
+
+
+<%= link_to 'Edit', edit_system_file_path(@system_file) %> |
+<%= link_to 'Back', system_files_path %>

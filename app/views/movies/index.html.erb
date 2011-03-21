@@ -1,0 +1,15 @@
+<h1>Listing movies</h1>
+
+<% @movies.each do |movie| %>
+    <div class="g160">
+    <%= link_to movie.name, edit_movie_path(movie) %><br>
+    <%= movie.fancy_length %><br>
+    <%= unless movie.thumbnails[2].nil? then image_tag "#{movie.thumbnails[2].big_path}", :width => 150 end %>
+    <%= link_to 'Destroy', movie, :confirm => 'Are you sure?', :method => :delete %>
+  </div>
+<% end %>
+
+
+<div class="clear"></div>
+
+<%= link_to 'New Movie', new_movie_path %>

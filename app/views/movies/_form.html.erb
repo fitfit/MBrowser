@@ -1,0 +1,16 @@
+<% semantic_form_for @movie do |form| %>
+    <% form.inputs do %>
+    <%= form.input :description %>
+    <% if @movie.system_files.empty? %>
+    <%= form.input :system_files,
+                   :as => :check_boxes,
+                   :collection => Hash[SystemFile.where(:storable_id => nil).collect{|f| [f.original_name, f.id]}]%>
+    <% else %>
+    <%= form.input :system_files,
+                   :as => :check_boxes,
+                   :collection => @movie.system_files%>
+            <% end %>
+    <%= form.input :tag_list, :as => :string %>
+        <% end %>
+    <%= form.buttons :commit %>
+<% end %>

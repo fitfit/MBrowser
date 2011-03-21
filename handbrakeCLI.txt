@@ -1,0 +1,9 @@
+HandBrakeCLI.exe -i Source.mov -t 1 -c 1 -o Destination.mp4 -f mp4 -X 558 -l 320 -e x264 -q 20 -a 1,1 -E faac,ac3 -6 dpl2,auto -R 48,Auto -B 160,auto -D 0.0,0.0 -x cabac=0:ref=2:me=umh:bframes=0:8x8dct=0:trellis=0:subq=6:weightb=0 -v 1
+
+Encoding webm with FFmpeg (version 0.6 or newer):
+
+ffmpeg.exe -i Source.mov -s 558X314 -aspect 16:9 -vb 500000 Destination.webm
+
+Encoding ogv with ffmpeg2theora:
+
+ffmpeg2theora-0.27.exe -o Destination.ogv -x 558 --aspect 16:9 -v 9 Source.mov 
