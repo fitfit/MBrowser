@@ -2,7 +2,10 @@ class MoviesController < ApplicationController
   # GET /movies
   # GET /movies.xml
   def index
-    @movies = Movie.paginate :page => params[:page], :per_page => 24
+    if params[:page]
+      session[:page] = params[:page]
+    end
+    @movies = Movie.paginate :page => session[:page], :per_page => 24
 
     respond_to do |format|
       format.html # index.html.erb

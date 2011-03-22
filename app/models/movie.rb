@@ -15,6 +15,14 @@ class Movie < ActiveRecord::Base
     end
   end
 
+  def compute_length
+    f = self.system_files.first
+    output = `"./bin/ffmpeg" -i #{f.path} 2>&1`
+    times = output.scan(/Duration: (\d{2}):(\d{2}):(\d{2})/)[0]
+    self.length = times[0].to_i*60*60 + times[1].to_i*60 + times[2].to_i
+    save!
+  end
+
   def generate_thumbnail
     unless self.thumbnails.empty?
       self.thumbnails.each{|t| t.destroy}
@@ -22,10 +30,8 @@ class Movie < ActiveRecord::Base
     f = self.system_files.first
     n = f.original_name
     new_path = f.path.split('.')[0..-2].join('.')
-    output = `"./bin/ffmpeg" -i #{f.path} 2>&1`
-    times = output.scan(/Duration: (\d{2}):(\d{2}):(\d{2})/)[0]
-    
-    self.length = times[0].to_i*60*60 + times[1].to_i*60 + times[2].to_i
+
+    self.compute_length
 
     10.times do |i|
       i = i.to_i
