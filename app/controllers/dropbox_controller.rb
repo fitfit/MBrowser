@@ -1,6 +1,6 @@
 require 'UUID'
 class DropboxController < ApplicationController
-  ACCEPTED_EXT = [".flv",".mpg",".mpeg",".avi",".wmv"]
+  ACCEPTED_EXT = [".flv",".mpg",".mpeg",".avi",".wmv",".asf",".mp4"]
   def show
     dir = params[:dir] || './dropbox'
     @files = Dir.new(dir).entries.collect do |e|
@@ -29,7 +29,7 @@ class DropboxController < ApplicationController
   def add_all
     dir = params[:dir] || './dropbox'
     Dir.new(dir).entries.each do |f|
-      if not File.directory?(dir+ "/" + f) and ACCEPTED_EXT.include? File.extname(f)
+      if not File.directory?(dir+ "/" + f) and ACCEPTED_EXT.include? File.extname(f).downcase!
         sf = process_file(dir+ "/" + f)
         Movie.create(:name => sf.original_name, :system_files => [sf]).delay.generate_thumbnail
       else unless File.directory?(dir+ "/" + f)
