@@ -29,7 +29,7 @@ class DropboxController < ApplicationController
   def add_all
     dir = params[:dir] || './dropbox'
     Dir.new(dir).entries.each do |f|
-      if not File.directory?(dir+ "/" + f) and ACCEPTED_EXT.include? File.extname(f).downcase!
+      if not File.directory?(dir+ "/" + f) and ACCEPTED_EXT.include? File.extname(f).downcase
         sf = process_file(dir+ "/" + f)
         Movie.create(:name => sf.original_name, :system_files => [sf]).delay.generate_thumbnail
       else unless File.directory?(dir+ "/" + f)
