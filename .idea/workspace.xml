@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b8a98e3f-1060-4f79-b505-8dc70d58a075" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/system_files_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/system_files_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/movie.rb" afterPath="$PROJECT_DIR$/app/models/movie.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/system_files/index.html.erb" afterPath="$PROJECT_DIR$/app/views/system_files/index.html.erb" />
     </list>
     <ignored path="MBrowser7.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,7 +57,7 @@
       <file leaf-file-name="movie.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/movie.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="4" selection-start="1595" selection-end="1595" vertical-scroll-proportion="1.2704626">
+            <state line="45" column="8" selection-start="1600" selection-end="1600" vertical-scroll-proportion="0.727758">
               <folding />
             </state>
           </provider>
@@ -68,7 +66,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/movies/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="133" selection-start="2554" selection-end="2683" vertical-scroll-proportion="-16.576923">
+            <state line="67" column="133" selection-start="2554" selection-end="2683" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -77,7 +75,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/tagging_room/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="22" selection-start="1058" selection-end="1058" vertical-scroll-proportion="-2.6153846">
+            <state line="28" column="22" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -86,7 +84,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/system_files/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="72" selection-start="102" selection-end="102" vertical-scroll-proportion="-0.65384614">
+            <state line="1" column="72" selection-start="102" selection-end="102" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -145,9 +143,6 @@
     <option name="UPDATE_CHANGES_POLICY" value="STASH" />
     <option name="LINE_SEPARATORS_CONVERSION_ASK" value="false" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Rails console: MBrowser7" root0="SKIP_HIGHLIGHTING" />
-  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
@@ -203,6 +198,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Favorites" />
+      <pane id="Scope" />
       <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
@@ -488,17 +485,15 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Favorites" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="org.jetbrains.plugins.ruby.settings.RubyIdeSdkConfigurable" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="org.jetbrains.plugins.ruby.settings.RubyIdeSdkConfigurable" />
     <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -723,12 +718,12 @@
     </configuration>
     <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Rake.db:migrate" />
-      <item index="1" class="java.lang.String" itemvalue="Rails.Production: MBrowser7" />
-      <item index="2" class="java.lang.String" itemvalue="Rails.Development: MBrowser7" />
-      <item index="3" class="java.lang.String" itemvalue="Rake.test" />
-      <item index="4" class="java.lang.String" itemvalue="Rake.spec" />
-      <item index="5" class="java.lang.String" itemvalue="Rake.jobs:work" />
-      <item index="6" class="java.lang.String" itemvalue="Rake.routes" />
+      <item index="1" class="java.lang.String" itemvalue="Rake.jobs:work" />
+      <item index="2" class="java.lang.String" itemvalue="Rake.routes" />
+      <item index="3" class="java.lang.String" itemvalue="Rails.Production: MBrowser7" />
+      <item index="4" class="java.lang.String" itemvalue="Rails.Development: MBrowser7" />
+      <item index="5" class="java.lang.String" itemvalue="Rake.test" />
+      <item index="6" class="java.lang.String" itemvalue="Rake.spec" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -760,7 +755,6 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32824025" sideWeight="0.22162162" order="1" side_tool="true" content_ui="tabs" />
@@ -773,6 +767,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -824,112 +819,88 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/controllers/tags_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="93" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="6" column="93" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/jquery.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/movies/_thumbnails.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="199" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="199" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/schema.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.3507589">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.3507589" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="181" selection-start="1402" selection-end="1402" vertical-scroll-proportion="-11.769231">
-          <folding />
-        </state>
+        <state line="18" column="181" selection-start="1402" selection-end="1402" vertical-scroll-proportion="-11.769231" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/site.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="27" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="16" column="27" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/movies/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20110322150901_add_tagged_bool.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="133" selection-start="2554" selection-end="2683" vertical-scroll-proportion="-16.576923">
-          <folding />
-        </state>
+        <state line="2" column="56" selection-start="116" selection-end="116" vertical-scroll-proportion="0.059130434" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/dropbox_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="95" selection-start="842" selection-end="929" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/tagging_room_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="47" selection-start="331" selection-end="331" vertical-scroll-proportion="0.0">
+        <state line="12" column="47" selection-start="331" selection-end="331" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/movies_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="5" selection-start="1597" selection-end="1597" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/movies/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="133" selection-start="2554" selection-end="2683" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/tagging_room/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="22" selection-start="1058" selection-end="1058" vertical-scroll-proportion="-2.6153846">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="97" selection-start="498" selection-end="521" vertical-scroll-proportion="0.0">
+        <state line="28" column="22" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/system_files/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="72" selection-start="102" selection-end="102" vertical-scroll-proportion="-0.65384614">
+        <state line="1" column="72" selection-start="102" selection-end="102" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/system_files_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="27" selection-start="996" selection-end="996" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="35" column="27" selection-start="996" selection-end="996" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20110322150901_add_tagged_bool.rb">
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="56" selection-start="116" selection-end="116" vertical-scroll-proportion="0.059130434">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/dropbox_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="95" selection-start="842" selection-end="929" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/movies_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="5" selection-start="1597" selection-end="1597" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="14" column="97" selection-start="498" selection-end="521" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/movie.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="4" selection-start="1595" selection-end="1595" vertical-scroll-proportion="1.2704626">
+        <state line="45" column="8" selection-start="1600" selection-end="1600" vertical-scroll-proportion="0.727758">
           <folding />
         </state>
       </provider>

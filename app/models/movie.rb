@@ -36,13 +36,13 @@ class Movie < ActiveRecord::Base
     self.thumbnails << Thumbnail.create(:order => i, :system_files => [SystemFile.create(:original_name => n.split('.')[0..-2].join('.') +"_thumb" +i.to_s , :name => n.split('.')[0..-2].join('.') + "_t" + i.to_s, :file_type => "jpg",:path => new_path + "_t" + i.to_s + ".jpg")])
     end
 
-    self.save
+    self.save!
   end
 
   def update_tagged
     unless self.new_record?
       self.tagged = !self.tag_list.empty?
     end
-    
+    true
   end
 end
