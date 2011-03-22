@@ -33,7 +33,7 @@ class SystemFilesController < ApplicationController
     @system_files = SystemFile.where(:storable_id => nil).each do |sf|
       Movie.create(:name => sf.original_name, :system_files => [sf]).delay.generate_thumbnail
     end
-
+    render :nothing => true
   end
   # GET /system_files/1/edit
   def edit
