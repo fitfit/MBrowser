@@ -21,7 +21,7 @@ class MoviesController < ApplicationController
       format.js {
         if params[:regenerate]
           @movie.delay.generate_thumbnail
-          render :nothing
+          render :nothing => true
         end
         
       }

@@ -10,6 +10,8 @@ class TaggingRoomController < ApplicationController
       end
     end
     @tags = Movie.tag_counts_on(:tags)
+    @tagged_count = Movie.where(:tagged => true).count
+    @movies_count = Movie.all.count
   end
 
   def tag

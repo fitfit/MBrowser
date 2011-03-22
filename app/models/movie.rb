@@ -2,6 +2,7 @@ class Movie < ActiveRecord::Base
   has_many :system_files, :class_name =>"SystemFile", :as => :storable, :dependent => :nullify
   has_many :thumbnails, :as => :tnable, :dependent => :destroy
   acts_as_taggable
+  before_save :update_tagged
 
   def fancy_length
     unless self.length.nil?
@@ -36,5 +37,9 @@ class Movie < ActiveRecord::Base
     end
 
     self.save!
+  end
+
+  def update_tagged
+    self.tagged = !self.tag_list.empty?
   end
 end

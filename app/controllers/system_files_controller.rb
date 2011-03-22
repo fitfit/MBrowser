@@ -15,7 +15,7 @@ class SystemFilesController < ApplicationController
   def show
     @system_file = SystemFile.find(params[:id])
     Thread.new{system("C://Program Files//VideoLAN//VLC//VLC.exe #{File.expand_path(@system_file.path)}")}
-
+    render :nothing => true
   end
 
   # GET /system_files/new

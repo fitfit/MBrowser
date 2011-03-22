@@ -28,7 +28,7 @@
         });
         $(function() {
             $( "#progressbar" ).progressbar({
-                        value: 37
+                        value:<%= (@tagged_count.to_f/@movies_count.to_f)*100 %>
                     });
             $( "button" ).button();
             $( "button").click(function() {
@@ -67,8 +67,8 @@
 
 <div id="content">
   <div class="g960">
-  <div id="progressbar"></div>
-    </div>
+  <div id="progressbar" class="g480 inside"></div>
+  <div class="g480 inside" style="text-align:center"><%= @tagged_count.to_s + " / " + @movies_count.to_s %></div>
   <div class="clear"></div>
   <div class="g160" id="col1">
     <% @tags[0..19].each do |t| %>
@@ -84,8 +84,10 @@
             <input id="tag" size="15">
           <button>Create tag</button>
         </div>
-    <div  class="ui-widget-header inside g320">
-          <p><%= link_to "I'm done, Next!", tagging_room_path %></p>
+    <div  class="inside g320">   
+
+      <button><span style="float:right"><%= link_to "I'm done, Next!", tagging_room_path %></span></button>
+      <span style="float:left;margin-left:30px;margin-right:30px"><%= link_to image_tag("vlc.png"), system_file_path(@movie.system_files.first), :remote => true %></span>
         </div>
     <div class="clear">&nbsp;</div>
     <div id="<%= @movie.id %>" class="draggable ui-widget-content">
