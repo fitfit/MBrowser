@@ -12,6 +12,7 @@ MBrowser7::Application.routes.draw do
   match 'dropbox' => 'dropbox#show'
   match 'add' => 'dropbox#add'
   match 'add_all' => 'dropbox#add_all'
+  match 'system_files/process_all' => "system_files#process_all", :as => 'process_all_system_file'
   resources :system_files
 
   # The priority is based upon order of creation:
