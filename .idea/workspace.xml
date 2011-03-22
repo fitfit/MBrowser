@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b8a98e3f-1060-4f79-b505-8dc70d58a075" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/tagging_room_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/tagging_room_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tagging_room/index.html.erb" afterPath="$PROJECT_DIR$/app/views/tagging_room/index.html.erb" />
     </list>
     <ignored path="MBrowser7.iws" />
@@ -67,7 +66,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/tagging_room/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="27" selection-start="2507" selection-end="2507" vertical-scroll-proportion="0.329806">
+            <state line="101" column="29" selection-start="3468" selection-end="3468" vertical-scroll-proportion="0.5097002">
               <folding />
             </state>
           </provider>
@@ -732,10 +731,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32824025" sideWeight="0.22162162" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -766,7 +765,7 @@
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Tagging Room" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added random Tagging Room" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -788,6 +787,7 @@
     <MESSAGE value="Added tags pages" />
     <MESSAGE value="Fixed extension problem" />
     <MESSAGE value="Added Tagging Room" />
+    <MESSAGE value="Added random Tagging Room" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -894,7 +894,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/tagging_room/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="27" selection-start="2507" selection-end="2507" vertical-scroll-proportion="0.329806">
+        <state line="101" column="29" selection-start="3468" selection-end="3468" vertical-scroll-proportion="0.5097002">
           <folding />
         </state>
       </provider>

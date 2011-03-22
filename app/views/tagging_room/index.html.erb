@@ -99,7 +99,7 @@
     <% end %>
   </div>
   <div class="g160" id="col2">
-    <% unless @tags.size < 10 %>
+    <% unless @tags.size < 20 %>
         <%   @tags[20..40].each do |t| %>
         <div  class="droppable ui-widget-header" id="<%=t.name%>">
           <p><%= t.name %></p>
