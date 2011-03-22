@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8a98e3f-1060-4f79-b505-8dc70d58a075" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/tagging_room_controller.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/tagging_room_helper.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/tagging_room/find.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/tagging_room/index.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/tagging_room/tag.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/stylesheets/jquery-ui-1.8.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/functional/tagging_room_controller_test.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/helpers/tagging_room_helper_test.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/movies/index.html.erb" afterPath="$PROJECT_DIR$/app/views/movies/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/site.css" afterPath="$PROJECT_DIR$/public/stylesheets/site.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/tagging_room_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/tagging_room_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tagging_room/index.html.erb" afterPath="$PROJECT_DIR$/app/views/tagging_room/index.html.erb" />
     </list>
     <ignored path="MBrowser7.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,7 +49,7 @@
       <file leaf-file-name="tagging_room_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/tagging_room_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="38" selection-start="222" selection-end="222" vertical-scroll-proportion="0.0">
+            <state line="13" column="0" selection-start="290" selection-end="290" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -74,10 +64,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/tagging_room/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="12" selection-start="2636" selection-end="2636" vertical-scroll-proportion="-10.461538">
+            <state line="71" column="27" selection-start="2507" selection-end="2507" vertical-scroll-proportion="0.329806">
               <folding />
             </state>
           </provider>
@@ -101,10 +91,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="site.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="site.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/site.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="453" selection-end="453" vertical-scroll-proportion="0.51602024">
+            <state line="16" column="27" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -167,12 +157,12 @@
         <option value="$PROJECT_DIR$/app/views/tags/show.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/tags_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/dropbox_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/tagging_room_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/views/tagging_room/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/movies/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/public/stylesheets/site.css" />
+        <option value="$PROJECT_DIR$/app/controllers/tagging_room_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/tagging_room/index.html.erb" />
       </list>
     </option>
   </component>
@@ -742,10 +732,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32824025" sideWeight="0.22162162" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -776,7 +766,7 @@
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed extension problem" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Tagging Room" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -797,6 +787,7 @@
     <MESSAGE value="Added ajax preview" />
     <MESSAGE value="Added tags pages" />
     <MESSAGE value="Fixed extension problem" />
+    <MESSAGE value="Added Tagging Room" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -859,30 +850,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/dropbox_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="93" selection-start="793" selection-end="793" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="68" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tagging_room/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="12" selection-start="2636" selection-end="2636" vertical-scroll-proportion="-10.461538">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/tagging_room_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="38" selection-start="222" selection-end="222" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -903,7 +873,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/site.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="453" selection-end="453" vertical-scroll-proportion="0.51602024">
+        <state line="16" column="27" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/tagging_room_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="290" selection-end="290" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/dropbox_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="93" selection-start="793" selection-end="793" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tagging_room/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="27" selection-start="2507" selection-end="2507" vertical-scroll-proportion="0.329806">
           <folding />
         </state>
       </provider>
