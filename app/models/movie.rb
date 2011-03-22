@@ -40,9 +40,7 @@ class Movie < ActiveRecord::Base
   end
 
   def update_tagged
-    unless self.new_record?
       self.tagged = !self.tag_list.empty?
-    end
     true
   end
 end
