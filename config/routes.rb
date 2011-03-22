@@ -1,4 +1,10 @@
 MBrowser7::Application.routes.draw do
+  match "tagging_room" => 'tagging_room#index', :as => 'tagging_room'
+
+  post "tagging_room/tag"
+
+  get "tagging_room/find"
+
   match "tags" => 'tags#index'
   match "tags/:id" => 'tags#show'
   resources :movies

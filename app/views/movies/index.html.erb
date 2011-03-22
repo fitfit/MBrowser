@@ -20,7 +20,7 @@ $(document).ready(function()
                tooltip: 'topMiddle'
             },
             adjust: {
-               screen: true // Keep the tooltip on-screen at all times
+               screen: false // Keep the tooltip on-screen at all times
             }
          },
          show: {
@@ -35,7 +35,7 @@ $(document).ready(function()
                radius: 4
             },
             name: 'light', // Use the default light style
-            width: 570 // Set the tooltip width
+            width: 900 // Set the tooltip width
          }
       })
    });
@@ -47,7 +47,7 @@ $(document).ready(function()
 <h1>Listing movies</h1>
 <div id="content">
 <% @movies.each_with_index do |movie,i| %>
-    <div class="rounded-corners g160" style="height:200px">
+    <div class="rounded-corners g160 ui-widget-content" style="height:200px">
     <h3 style="text-align:center"><%= link_to truncate(movie.name, :length => 12,:omission =>  "..."), edit_movie_path(movie) %></h3>
       <% unless movie.thumbnails[2].nil? %>
           <a href="#" rel="<%= movie_thumbs_path(movie) %>" name="<%= movie.name %>"><%=  image_tag("#{movie.thumbnails[2].big_path}", :width => 145, :height => 90) %></a>

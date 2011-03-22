@@ -1,0 +1,2 @@
+module TaggingRoomHelper
+end
