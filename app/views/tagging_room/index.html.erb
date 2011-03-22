@@ -1,9 +1,13 @@
 <script type="text/javascript" charset="utf-8">
     $(document).ready(function()
     {
-        $('.draggable').each(function(){
-            $(this).draggable({ revert: "valid", helper: "clone" });
-        });
+        $( ".draggable" ).draggable({
+			cursor: "move",
+			cursorAt: { top: 0, left: 150 },
+			helper: function( event ) {
+				return $( "<div class='ui-widget-header' style=\"width:300px\"><%= @movie.name %></div>" );
+			}
+		});
         $( '.droppable').each(function(){
             $(this).droppable({
                 greedy: true,
@@ -32,7 +36,7 @@
                     });
             $( "button" ).button();
             $( "button").click(function() {
-                $("#col1").prepend(
+                $("#col4").prepend(
                         '<div  class="droppable ui-widget-header" id="'+$( "#tag" ).attr('value')+'">'+
           '<p>'+$( "#tag" ).attr('value')+'</p>'+
         '</div>'+
@@ -70,15 +74,29 @@
   <div id="progressbar" class="g480 inside"></div>
   <div class="g480 inside" style="text-align:center"><%= @tagged_count.to_s + " / " + @movies_count.to_s %></div>
   <div class="clear"></div>
-  <div class="g160" id="col1">
-    <% @tags[0..19].each do |t| %>
-        <div  class="droppable ui-widget-header" id="<%=t.name%>">
+  <div class="inside g80" id="col1">
+    <% @tags[0..10].each do |t| %>
+        <div  class="droppable ui-widget-header" id="<%=t.name%>"  style="width:50px">
           <p><%= t.name %></p>
         </div>
         <div class="clear"></div>
     <% end %>
 
   </div>
+  <div class="g80" id="col2">
+    <% unless @tags.size < 10 %>
+    <% @tags[11..21].each do |t| %>
+        <div  class="droppable ui-widget-header" id="<%=t.name%>" style="width:50px">
+          <p><%= t.name %></p>
+        </div>
+        <div class="clear"></div>
+            <% end %>
+    <% else %>
+    <div><br></div>
+  <% end %>
+
+</div>
+
   <div class="g640">
     <div  class="ui-widget-header inside g320">
             <input id="tag" size="15">
@@ -90,9 +108,9 @@
       <span style="float:left;margin-left:30px;margin-right:30px"><%= link_to image_tag("vlc.png"), system_file_path(@movie.system_files.first), :remote => true %></span>
         </div>
     <div class="clear">&nbsp;</div>
-    <div id="<%= @movie.id %>" class="draggable ui-widget-content">
+    <div id="<%= @movie.id %>" class="draggable ui-widget-content" >
       <h1><%= @movie.name %></h1>
-    </div>
+
     <% @movie.thumbnails.each_with_index do |t, i| %>
         <% if i%2 == 0 %>
             <div class="clear">&nbsp;</div>
@@ -100,9 +118,21 @@
         <%= image_tag "#{t.big_path}", :width => 300 %>
     <% end %>
   </div>
-  <div class="g160" id="col2">
-    <% unless @tags.size < 20 %>
-        <%   @tags[20..40].each do |t| %>
+    </div>
+  <div class="g80" id="col3">
+    <% unless @tags.size < 21 %>
+        <%   @tags[22..32].each do |t| %>
+        <div  class="droppable ui-widget-header" id="<%=t.name%>">
+          <p><%= t.name %></p>
+        </div>
+        <div class="clear">&nbsp;</div>
+            <% end %>
+    <% end %>
+
+  </div>
+  <div class="g80" id="col4">
+    <% unless @tags.size < 32 %>
+        <%   @tags[33..44].each do |t| %>
         <div  class="droppable ui-widget-header" id="<%=t.name%>">
           <p><%= t.name %></p>
         </div>
