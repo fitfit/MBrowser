@@ -84,7 +84,7 @@
 
   </div>
   <div class="g80" id="col2">
-    <% unless @tags.size < 10 %>
+    <% unless @tags.size < 11 %>
     <% @tags[11..21].each do |t| %>
         <div  class="droppable ui-widget-header" id="<%=t.name%>" style="width:50px">
           <p><%= t.name %></p>
@@ -120,7 +120,7 @@
   </div>
     </div>
   <div class="g80" id="col3">
-    <% unless @tags.size < 21 %>
+    <% unless @tags.size < 22 %>
         <%   @tags[22..32].each do |t| %>
         <div  class="droppable ui-widget-header" id="<%=t.name%>">
           <p><%= t.name %></p>
@@ -131,7 +131,7 @@
 
   </div>
   <div class="g80" id="col4">
-    <% unless @tags.size < 32 %>
+    <% unless @tags.size < 33 %>
         <%   @tags[33..44].each do |t| %>
         <div  class="droppable ui-widget-header" id="<%=t.name%>">
           <p><%= t.name %></p>
