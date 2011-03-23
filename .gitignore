@@ -6,5 +6,5 @@ public/library/*.*
 dropbox/*.*
 bin/*.*
 ConvertLog.txt
-.idea/*
+.idea
 config/database.yml
