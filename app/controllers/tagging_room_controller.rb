@@ -9,6 +9,7 @@ class TaggingRoomController < ApplicationController
         break
       end
     end
+    if @movie.nil? then @movie = ms[r] end
     @tags = Movie.tag_counts_on(:tags)
     @tagged_count = Movie.where(:tagged => true).count
     @movies_count = Movie.all.count
@@ -16,8 +17,15 @@ class TaggingRoomController < ApplicationController
 
   def tag
     @movie = Movie.find(params[:movie])
-    @movie.tag_list = @movie.tag_list.join(', ') + "," + params[:tag]
+    @movie.tag_list.add(params[:tag])
     @movie.save!
+  end
+
+  def untag
+    @movie = Movie.find(params[:movie])
+    @movie.tag_list.remove(params[:tag])
+    @movie.save!
+    render :nothing => true
   end
 
   def find

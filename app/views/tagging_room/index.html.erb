@@ -1,57 +1,20 @@
 <script type="text/javascript" charset="utf-8">
     $(document).ready(function()
     {
-        var availableTags = [
-            <% s="" %>
-			<% @tags.each{ |t| s+= '"' + t.name + '",'} %>
-                <%= s.html_safe %>
-		];
-		$( "#tag" ).autocomplete({
-			source: availableTags
-		});
-        $( ".draggable" ).draggable({
-			cursor: "move",
-			cursorAt: { top: 0, left: 150 },
-			helper: function( event ) {
-				return $( "<div class='ui-widget-header' style=\"width:300px\"><%= @movie.name %></div>" );
-			}
-		});
-        $( '.droppable').each(function(){
-            $(this).droppable({
-                greedy: true,
-                hoverClass: "ui-state-active",
-                drop: function( event, ui ) {
-
-                    d = "tag="+$(this).attr('id') +"&movie="+ui.draggable.attr('id');
-                    $.ajax({
-                       type: "POST",
-                       url: "tagging_room/tag",
-                       data: d,
-                        context: $(this),
-                       success: function(msg){
-                         $( this )
-                            .addClass( "ui-state-highlight" )
+        function highlight_tagged(obj){
+            obj.addClass( "ui-state-highlight" )
                             .find( "div span" )
-                            .html( "Tagged" );
-                       }
-                     });
-                }
+                            .html( "Tagged <%= "" %>");
+            obj.find( "div:first" ).append('<button class="untag_button " style="float:right;width:20px;height:20px;"><span style="font-size: 0.7em">x</span></button>');
+            $(".untag_button").each(function(){
+                tag = $(this.parentNode.parentNode).attr('id');
+                make_untag_button($(this),tag);
             });
-        });
-        $(function() {
-            $( "#progressbar" ).progressbar({
-                        value:<%= (@tagged_count.to_f/@movies_count.to_f)*100 %>
-                    });
-            $( "#create_tag_button" ).button();
-            $( "#create_tag_button").click(function() {
-                $("#col4").prepend(
-                        '<div  class="droppable ui-widget-header" id="'+$( "#tag" ).attr('value')+'">'+
-          '<p>'+$( "#tag" ).attr('value')+'</p>'+
-        '</div>'+
-        '<div class="clear">&nbsp;</div>'
-                        );
-            $( '.droppable').each(function(){
-            $(this).droppable({
+
+        }
+
+        function make_droppable(obj){
+          obj.droppable({
                 greedy: true,
                 hoverClass: "ui-state-active",
                 drop: function( event, ui ) {
@@ -63,17 +26,69 @@
                        data: d,
                        context: $(this),
                        success: function(msg){
-                         $( this )
-                            .addClass( "ui-state-highlight" )
-                            .find( "div span" )
-                            .html( "Tagged" );
+                         highlight_tagged($( this ));
                        }
                      });
                 }
             });
-        });
+        }
+
+        function make_untag_button(obj,tag){
+            obj.button();
+            obj.click(function() {
+                d = "tag="+tag +"&movie=" + <%= @movie.id %>;
+                    $.ajax({
+                       type: "POST",
+                       url: "tagging_room/untag",
+                       data: d,
+                       context: $(this),
+                       success: function(msg){
+                         $("#"+tag).removeClass( "ui-state-highlight" ).find( "div span" ).html( "<br>");
+                          $("#"+tag).removeClass( "ui-state-highlight" ).find( "div button" ).remove();
+                       }
+                     });
+
             });
+        }
+
+
+		<% s2='"' %>
+        <% @movie.tag_list.each_with_index do |t,i| %>
+            <% s2+= '#' + t %>
+            <% if i < @movie.tag_list.size  - 1 then s2 += ' , '  else s2 += '"' end%>
+        <% end %>
+        <% unless @movie.tag_list.empty? %>
+        highlight_tagged($(<%= s2.html_safe %>));
+        <% end %>
+
+        $( ".draggable" ).draggable({
+			cursor: "move",
+			cursorAt: { top: 0, left: 150 },
+			helper: function( event ) {
+				return $( "<div class='ui-widget-header' style=\"width:300px\"><%= @movie.name %></div>" );
+			}
+		});
+
+        $( '.droppable').each(function(){
+            make_droppable($(this));
         });
+
+        $( "#progressbar" ).progressbar({
+            value:<%= (@tagged_count.to_f/@movies_count.to_f)*100 %>
+            });
+        $( "#create_tag_button" ).button();
+        $( "#create_tag_button").click(function() {
+            tag = $("#tag").attr('value');
+            $("#tag").val("");
+            $("#col4").prepend(
+                '<div  class="droppable ui-widget-header" id="'+tag+'">'+
+                  '<p>'+tag+'</p>'+
+                '</div>'+
+                '<div class="clear">&nbsp;</div>'
+                    );
+            make_droppable($("#"+tag));
+        });
+
     });
 </script>
 
