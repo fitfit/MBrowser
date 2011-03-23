@@ -6,6 +6,7 @@ gem 'rails', '3.0.5'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'mysql'
 gem 'uuid'
 gem 'acts-as-taggable-on'
 gem 'formtastic'

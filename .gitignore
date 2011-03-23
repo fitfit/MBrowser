@@ -7,3 +7,4 @@ dropbox/*.*
 bin/*.*
 ConvertLog.txt
 .idea/*
+config/database.yml
