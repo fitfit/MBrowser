@@ -6,3 +6,4 @@ public/library/*.*
 dropbox/*.*
 bin/*.*
 ConvertLog.txt
+.idea/*

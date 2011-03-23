@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/ludicast/yaml_db.git
+  revision: ca178cfb59cfbd5a1a4972798a74a6f06f83602d
+  specs:
+    yaml_db (0.2.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -93,3 +99,4 @@ DEPENDENCIES
   sqlite3
   uuid
   will_paginate (~> 3.0.pre2)
+  yaml_db!
