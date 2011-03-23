@@ -2,6 +2,7 @@ MBrowser7::Application.routes.draw do
   match "tagging_room" => 'tagging_room#index', :as => 'tagging_room'
 
   post "tagging_room/tag"
+  post "tagging_room/untag"
 
   get "tagging_room/find"
 
