@@ -14,7 +14,7 @@ function scrollalert(){
 	var scrolltop=$('#scrollbox').attr('scrollTop');
 	var scrollheight=$('#scrollbox').attr('scrollHeight');
 	var windowheight=$('#scrollbox').attr('clientHeight');
-	var scrolloffset=20;
+	var scrolloffset=100;
 	if(scrolltop>=(scrollheight-(windowheight+scrolloffset)) && totalItems*3<nb_item)
 	{
 		//fetch new items
@@ -37,7 +37,7 @@ function scrollalert(){
 
 <h1>Listing movies</h1>
 <div id="container">
-	<div id="scrollbox" >
+	<div id="scrollbox" style="height:700px;width:990px;overflow:auto; overflow-x:hidden;" >
 		<div id="content" >
 		</div>
 	</div>
