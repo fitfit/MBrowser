@@ -4,7 +4,7 @@ $(document).ready(function()
 	updatestatus();
 	scrollalert();
 });
-var totalItems=1;
+var totalItems=0;
 var nb_item =<%= Movie.all.count%>;
 function updatestatus(){
 	//Show number of loaded items
@@ -15,18 +15,19 @@ function scrollalert(){
 	var scrollheight=$('#scrollbox').attr('scrollHeight');
 	var windowheight=$('#scrollbox').attr('clientHeight');
 	var scrolloffset=800;
-	if(scrolltop>=(scrollheight-(windowheight+scrolloffset)) && totalItems*3<nb_item)
+	if(scrolltop>=(scrollheight-(windowheight+scrolloffset)) && totalItems*6<nb_item)
 	{
 		//fetch new items
 		$('#status').text('Loading more items...');
         $.ajax({
            type: "GET",
            url: "movies/row",
-           data: "page="+(totalItems),
+           data: "page="+(++totalItems),
            context: $(this),
            success: function(msg){
-             	$('#content').append(msg);
-               totalItems += 1;
+               s = msg
+             	$('#content').append(s);
+               //totalItems += 1;
                updatestatus();
            }
          });
@@ -36,6 +37,7 @@ function scrollalert(){
   </script>
 
 <h1>Listing movies</h1>
+<%= link_to 'Skip 120', movies_path(:offset=>20) %>
 <div id="container">
 	<div id="scrollbox" style="height:700px;width:990px;overflow:auto; overflow-x:hidden;" >
 		<div id="content" >
