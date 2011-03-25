@@ -1,0 +1,4 @@
+<h5>Views</h5>
+<% View.all.each do |v| %>
+<div><%= link_to v.name, view_path(v) %></div>
+<% end %>

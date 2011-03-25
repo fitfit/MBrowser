@@ -4,8 +4,9 @@ $(document).ready(function()
 	updatestatus();
 	scrollalert();
 });
-var totalItems=<%= @page.to_i*4 %>;
-var nb_item =<%= Movie.all.count%>;
+//var totalItems=<%= @page.to_i*4 %>;
+var totalItems=0;
+var nb_item =<%= @nb%>;
 function updatestatus(){
 	//Show number of loaded items
 	$('#status').text('Loaded '+totalItems*3+' Items');
@@ -21,7 +22,7 @@ function scrollalert(){
 		$('#status').text('Loading more items...');
         $.ajax({
            type: "GET",
-           url: "movies/row",
+           url: '<%= movie_row_path %>',
            data: "page="+(++totalItems),
            context: $(this),
            success: function(msg){
@@ -38,7 +39,7 @@ function scrollalert(){
 
 <h1>Listing movies</h1>
 <%= link_to 'Skip 120', movies_path(:offset=>20) %>
-<div id="container">
+<div id="container" class="g960 inside">
 	<div id="scrollbox" style="height:700px;width:990px;overflow:auto; overflow-x:hidden;" >
 		<div id="content" >
 		</div>

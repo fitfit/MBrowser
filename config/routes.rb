@@ -1,4 +1,8 @@
 MBrowser7::Application.routes.draw do
+  resources :views do
+    resource :conditions
+  end
+
   match "tagging_room" => 'tagging_room#index', :as => 'tagging_room'
 
   post "tagging_room/tag"
@@ -8,7 +12,7 @@ MBrowser7::Application.routes.draw do
 
   match "tags" => 'tags#index'
   match "tags/:id" => 'tags#show'
-  get "movies/row/" => 'movies#row'
+  get "movies/row/" => 'movies#row', :as => 'movie_row'
   resources :movies
   match "movies/:id/thumbs" => 'movies#thumbs', :as => 'movie_thumbs'
   match "movies/:id/thumb" => 'movies#thumb', :as => 'movie_thumb'

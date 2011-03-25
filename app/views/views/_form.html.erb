@@ -1,0 +1,8 @@
+<% semantic_form_for @view do |form| %>
+    <% form.inputs do %>
+        <%= form.input :name %>
+        <%= form.input :tag_list, :as => :string %>
+        <%= form.inputs :kind, :attr,:name => 'Conditions #%i', :for => :conditions %>
+    <% end %>
+        <%= form.buttons %>
+<% end %>

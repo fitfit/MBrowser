@@ -1,6 +1,7 @@
 class Movie < ActiveRecord::Base
   has_many :system_files, :class_name =>"SystemFile", :as => :storable, :dependent => :nullify
   has_many :thumbnails, :as => :tnable, :dependent => :destroy
+  has_and_belongs_to_many :views
   acts_as_taggable
   before_save :update_tagged
 

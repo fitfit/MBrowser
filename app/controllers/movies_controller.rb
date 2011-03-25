@@ -2,11 +2,14 @@ class MoviesController < ApplicationController
   # GET /movies
   # GET /movies.xml
   def index
-    if params[:page]
-      session[:page] = params[:page]
-    end
-    @page = session[:page]
-    @movies = Movie.paginate :page => session[:page], :per_page => 24
+#    if params[:page]
+#      session[:page] = params[:page]
+#    end
+#    @page = session[:page]
+#    @movies = Movie.paginate :page => session[:page], :per_page => 24
+    m = View.find(session[:view]).get_movies
+    @nb = m.count
+    @movies = m.paginate :page => params[:page], :per_page => 24
 
     respond_to do |format|
       format.html # index.html.erb
@@ -15,7 +18,9 @@ class MoviesController < ApplicationController
   end
 
   def row
-    @movies = Movie.paginate :page => params[:page], :per_page => 6
+    m =View.find(session[:view]).get_movies
+    @nb = m.count
+    @movies = m.paginate :page => params[:page], :per_page => 6
     respond_to do |format|
       format.html {render 'row',:layout => false}
       format.xml  { render :xml => @movies }
