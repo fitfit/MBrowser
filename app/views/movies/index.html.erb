@@ -4,7 +4,7 @@ $(document).ready(function()
 	updatestatus();
 	scrollalert();
 });
-var totalItems=0;
+var totalItems=<%= @page*4 %>;
 var nb_item =<%= Movie.all.count%>;
 function updatestatus(){
 	//Show number of loaded items

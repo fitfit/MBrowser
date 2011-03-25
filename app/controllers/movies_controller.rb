@@ -5,6 +5,7 @@ class MoviesController < ApplicationController
     if params[:page]
       session[:page] = params[:page]
     end
+    @page = session[:page]
     @movies = Movie.paginate :page => session[:page], :per_page => 24
 
     respond_to do |format|
@@ -14,9 +15,7 @@ class MoviesController < ApplicationController
   end
 
   def row
-    p = params[:page].to_i+ params[:offset].to_i
-    puts p
-    @movies = Movie.paginate :page => p, :per_page => 6
+    @movies = Movie.paginate :page => params[:page], :per_page => 6
     respond_to do |format|
       format.html {render 'row',:layout => false}
       format.xml  { render :xml => @movies }
