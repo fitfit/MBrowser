@@ -1,77 +1,47 @@
 <script type="text/javascript" charset="utf-8">
 $(document).ready(function()
 {
-    $('#content a[rel]').each(function()
-   {
-      $(this).qtip(
-      {
-         content: {
-            // Set the text to an image HTML string with the correct src URL to the loading image you want to use
-            text: '<img class="throbber" src="/projects/qtip/images/throbber.gif" alt="Loading..." />',
-            url: $(this).attr('rel'), // Use the rel attribute of each element for the url to load
-            title: {
-               text: $(this).attr('name'), // Give the tooltip a title using each elements text
-               button: 'Close' // Show a close link in the title
-            }
-         },
-         position: {
-            corner: {
-               target: 'topMiddle', // Position the tooltip above the link
-               tooltip: 'bottomMiddle'
-            },
-            adjust: {
-               screen: true // Keep the tooltip on-screen at all times
-            }
-         },
-         show: {
-            when: 'click',
-            solo: true // Only show one tooltip at a time
-         },
-         hide: 'unfocus',
-         style: {
-            tip: true, // Apply a speech bubble tip to the tooltip at the designated tooltip corner
-            border: {
-               width: 0,
-               radius: 4
-            },
-            name: 'light', // Use the default light style
-            width: 900 // Set the tooltip width
-         }
-      })
-   });
+	updatestatus();
+	scrollalert();
 });
+var totalItems=1;
+var nb_item =<%= Movie.all.count%>;
+function updatestatus(){
+	//Show number of loaded items
+	$('#status').text('Loaded '+totalItems*3+' Items');
+}
+function scrollalert(){
+	var scrolltop=$('#scrollbox').attr('scrollTop');
+	var scrollheight=$('#scrollbox').attr('scrollHeight');
+	var windowheight=$('#scrollbox').attr('clientHeight');
+	var scrolloffset=20;
+	if(scrolltop>=(scrollheight-(windowheight+scrolloffset)) && totalItems*3<nb_item)
+	{
+		//fetch new items
+		$('#status').text('Loading more items...');
+        $.ajax({
+           type: "GET",
+           url: "movies/row",
+           data: "page="+(totalItems),
+           context: $(this),
+           success: function(msg){
+             	$('#content').append(msg);
+               totalItems += 1;
+               updatestatus();
+           }
+         });
+	}
+	setTimeout('scrollalert();', 1500);
+}
   </script>
 
-
-
 <h1>Listing movies</h1>
-<div id="content">
-<% @movies.each_with_index do |movie,i| %>
-    <div class="rounded-corners g160 ui-widget-content" style="height:200px">
-    <h3 style="text-align:center"><%= link_to truncate(movie.name, :length => 12,:omission =>  "..."), edit_movie_path(movie) %></h3>
-      <% unless movie.thumbnails[2].nil? %>
-          <a href="#" rel="<%= movie_thumbs_path(movie) %>" name="<%= movie.name %>"><%=  image_tag("#{movie.thumbnails[2].big_path}", :width => 145, :height => 90) %></a>
-      <% end %>
-      <div class="g80 inside">
-        <% l = movie.fancy_length %>
-        <% unless l[:hour] == "0" %>
-        <h2 style="display:inline;margin-left:5px"><%= l[:hour] %></h2>H<br>
-            <% end %>
-        <% unless l[:min] == "0" %>
-        <h2 style="display:inline;margin-left:5px"><%= l[:min] %></h2>M<br>
-            <% end %>
-            <% unless l[:sec] == "0" %>
-        <h2 style="display:inline;margin-left:5px"><%= l[:sec] %></h2>S<br>
-            <% end %>
-      </div>
-      <div class="g80" style="height:20px">
-    <span style="float:right"><%= link_to image_tag("vlc.png"), system_file_path(movie.system_files.first), :remote => true %></span>
-      </div>
-  </div>
-    <% if (i+1)%6 == 0 and i != 0 %>
-      <div class="clear">&nbsp;</div>
-    <% end %>
-<% end %>
+<div id="container">
+	<div id="scrollbox" >
+		<div id="content" >
+		</div>
+	</div>
+	<p><span id="status" ></span></p>
 </div>
 
 <div class="clear"></div>

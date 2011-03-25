@@ -1,0 +1,23 @@
+<% @movies.each_with_index do |movie,i| %>
+    <div id="<%= movie.id %>" class="rounded-corners g160 ui-widget-content" style="height:200px">
+      </div>
+    <script type="text/javascript" charset="utf-8">
+
+    $(document).ready(function()
+    {
+        $("#<%= movie.id %>").html('<%= image_tag "loading.gif", :width =>130 %>');
+        $.ajax({
+            type: "GET",
+            url: "<%= movie_thumb_path(movie)%>",
+            context: $(this),
+           success: function(msg){
+             	$("#<%= movie.id %>").html(msg);
+               updatestatus();
+           }
+         });
+    });
+      </script>
+
+
+<% end %>
+<div class="clear">&nbsp;</div>

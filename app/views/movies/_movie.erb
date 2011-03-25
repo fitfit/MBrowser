@@ -1,0 +1,20 @@
+
+<h3 style="text-align:center"><%= link_to truncate(movie.name, :length => 12, :omission => "..."), edit_movie_path(movie) %></h3>
+<% unless movie.thumbnails[2].nil? %>
+    <a href="#" rel="<%= movie_thumbs_path(movie) %>" name="<%= movie.name %>"><%= image_tag("#{movie.thumbnails[2].big_path}", :width => 145, :height => 90) %></a>
+<% end %>
+<div class="g80 inside">
+  <% l = movie.fancy_length %>
+  <% unless l[:hour] == "0" %>
+      <h2 style="display:inline;margin-left:5px"><%= l[:hour] %></h2>H<br>
+  <% end %>
+  <% unless l[:min] == "0" %>
+      <h2 style="display:inline;margin-left:5px"><%= l[:min] %></h2>M<br>
+  <% end %>
+  <% unless l[:sec] == "0" %>
+      <h2 style="display:inline;margin-left:5px"><%= l[:sec] %></h2>S<br>
+  <% end %>
+</div>
+<div class="g80" style="height:20px">
+  <span style="float:right"><%= link_to image_tag("vlc.png"), system_file_path(movie.system_files.first), :remote => true %></span>
+</div>

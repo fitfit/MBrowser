@@ -13,20 +13,23 @@ class MoviesController < ApplicationController
     end
   end
 
+  def row
+    @movies = Movie.paginate :page => params[:page], :per_page => 6
+    puts @movies.count
+    respond_to do |format|
+      format.html {render 'row',:layout => false}
+      format.xml  { render :xml => @movies }
+    end
+  end
+
   # GET /movies/1
   # GET /movies/1.xml
   def show
     @movie = Movie.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @movie }
       format.js {
-        if params[:regenerate]
-          @movie.delay.generate_thumbnail
-          render :nothing => true
-        end
-        
       }
     end
   end
@@ -34,6 +37,11 @@ class MoviesController < ApplicationController
   def thumbs
     @movie = Movie.find(params[:id])
     render :partial => 'thumbnails'
+  end
+
+  def thumb
+    @movie = Movie.find(params[:id])
+    render :partial => 'movie', :locals =>{:movie => @movie}, :layout => false
   end
 
   # GET /movies/new
