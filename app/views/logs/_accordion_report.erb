@@ -46,7 +46,7 @@
             <% if l.loggable_type == "Movie" %>
                 <%= link_to l.loggable.name, movie_path(l.loggable) %>
               <% else if l.loggable_type == "Thumbnail" %>
-                <%= link_to l.loggable.movie.name, movie_path(l.loggable.movie) %>
+                <%= link_to l.loggable.tnable.name, movie_path(l.loggable.tnable) %>
              <% end %>
               <% end %>
 
