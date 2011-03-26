@@ -1,4 +1,8 @@
 MBrowser7::Application.routes.draw do
+  get "integrity/", :controller => 'integrity', :action => 'index'
+  get "integrity/time_thumb"
+  get "integrity/purge_thumb"
+  
   post "logs/read_all", :as => 'logs_read_all'
   resources :logs
 

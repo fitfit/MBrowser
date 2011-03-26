@@ -1,0 +1,6 @@
+<h1>Integrity#index</h1>
+There are currently <b><%= @thumb_no_time %></b> thumbnails without a time element.
+<%= link_to 'Fix it!', {:controller => 'integrity', :action => 'time_thumb'},:remote=>true %>
+<div class="clear"></div>
+If the previous fix failed, you can try purging the system of orphaned thumbnails
+<%= link_to 'Purge!', {:controller => 'integrity', :action => 'purge_thumb'},:remote=>true   %>

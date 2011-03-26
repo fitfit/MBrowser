@@ -26,6 +26,13 @@ class Movie < ActiveRecord::Base
     self.delay.init!
   end
 
+  def recalculate_time_of_thumbnails
+    thumbnails.each do |t|
+      t.time = (t.order*0.1*self.length).to_i;
+      t.save!
+    end
+  end
+
   def check_file_location_and_length
     if File.exists?(self.system_file.path)
       self.compute_length
@@ -44,15 +51,22 @@ class Movie < ActiveRecord::Base
 
   def try_to_make_thumbs
     self.generate_thumbnail
+  end
+
+  def thumbs_exist?
+    thumbs_ok = true
     unless self.thumbnails.count != 10
       self.thumbnails.each do |t|
         unless File.exists?(t.system_files[0].path)
+          thumbs_ok = false
           Log.create(:title=>"Movie with thumbnail object but without files",:controller=>'movie',:action=>"try_to_make_thumbs",:loggable =>self)
         end
       end
     else
+      thumb_ok = false
       Log.create(:title=>"Movie with less than then 10 thumbnails",:controller=>'movie',:action=>"try_to_make_thumbs",:loggable =>self)
     end
+    return thumbs_ok
   end
 
   def fancy_length

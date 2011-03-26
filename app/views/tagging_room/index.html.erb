@@ -18,7 +18,7 @@
                 hoverClass: "ui-state-active",
                 drop: function(event, ui) {
 
-                    d = "tag=" + $(this).attr('id') + "&movie=" + ui.draggable.attr('id');
+                    d = "tag=" + $(this).attr('id').replace("_"," ") + "&movie=" + ui.draggable.attr('id');
                     $.ajax({
                         type: "POST",
                         url: "tagging_room/tag",
@@ -78,6 +78,7 @@
         $("#create_tag_button").button();
         $("#create_tag_button").click(function() {
             tag = $("#tag").attr('value');
+            tag = tag.replace(" ","_");
             $("#tag").val("");
             $("#col4").prepend(
                     '<div  class="droppable ui-widget-header" id="' + tag + '">' +
