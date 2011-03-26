@@ -43,7 +43,11 @@
             <b>Description</b><br>
             <%= l.title %>
             <div class="clear"></div>
-            <%= link_to l.loggable.name, movie_path(l.loggable) %>
+            <% if l.loggable_type == "movie" %>
+                <%= link_to l.loggable.name, movie_path(l.loggable) %>
+              <% else if l.loggable_type == "thumbnail" %>
+                <%= link_to l.loggable.movie.name, movie_path(l.loggable.movie) %>
+             <% end %>
 
         </div>
     <% end %>

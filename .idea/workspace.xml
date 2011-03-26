@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8a98e3f-1060-4f79-b505-8dc70d58a075" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/dropbox/_bar.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/logs/_accordion_report.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/navigation/_left_column.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/navigation/_right_column.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/system_files/_bar.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/tags/_bar.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/logs_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/logs_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/movies_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/movies_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/tagging_room_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/tagging_room_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/movies/index.html.erb" afterPath="$PROJECT_DIR$/app/views/movies/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/movies/row.html.erb" afterPath="$PROJECT_DIR$/app/views/movies/row.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tagging_room/index.html.erb" afterPath="$PROJECT_DIR$/app/views/tagging_room/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/golden.css" afterPath="$PROJECT_DIR$/public/stylesheets/golden.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/site.css" afterPath="$PROJECT_DIR$/public/stylesheets/site.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/logs/_accordion_report.erb" afterPath="$PROJECT_DIR$/app/views/logs/_accordion_report.erb" />
     </list>
     <ignored path="MBrowser7.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,10 +36,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_bar.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/tags/_bar.erb">
+      <file leaf-file-name="_accordion_report.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/logs/_accordion_report.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="57" selection-start="222" selection-end="222" vertical-scroll-proportion="-0.65384614">
+            <state line="48" column="78" selection-start="1646" selection-end="1646" vertical-scroll-proportion="0.79049295">
               <folding />
             </state>
           </provider>
@@ -69,10 +54,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="movie.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="movie.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/movie.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="20" selection-start="778" selection-end="778" vertical-scroll-proportion="0.37205386">
+            <state line="25" column="20" selection-start="778" selection-end="778" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -181,7 +166,6 @@
         <option value="$PROJECT_DIR$/app/controllers/logs_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/navigation/_right_column.erb" />
-        <option value="$PROJECT_DIR$/app/views/logs/_accordion_report.erb" />
         <option value="$PROJECT_DIR$/app/views/navigation/_left_column.erb" />
         <option value="$PROJECT_DIR$/app/views/system_files/_bar.erb" />
         <option value="$PROJECT_DIR$/app/views/dropbox/_bar.erb" />
@@ -190,6 +174,7 @@
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/helpers/tagging_room_helper.rb" />
         <option value="$PROJECT_DIR$/app/views/tagging_room/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/logs/_accordion_report.erb" />
       </list>
     </option>
   </component>
@@ -870,10 +855,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32864866" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32864866" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32824025" sideWeight="0.22162162" order="1" side_tool="true" content_ui="tabs" />
@@ -904,7 +889,7 @@
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Robust thumbnail generation with error logging" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed display," />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -935,6 +920,7 @@
     <MESSAGE value="Ajax loading" />
     <MESSAGE value="Added concept of views" />
     <MESSAGE value="Robust thumbnail generation with error logging" />
+    <MESSAGE value="fixed display," />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -950,13 +936,6 @@
     <entry file="file://$PROJECT_DIR$/app/views/movies/row.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="12" selection-start="389" selection-end="687" vertical-scroll-proportion="0.59336823">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/logs/_accordion_report.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="50" selection-start="131" selection-end="131" vertical-scroll-proportion="0.118673645">
           <folding />
         </state>
       </provider>
@@ -989,13 +968,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tags/_bar.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="57" selection-start="222" selection-end="222" vertical-scroll-proportion="-0.65384614">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/movies/_movie.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="50" selection-start="51" selection-end="98" vertical-scroll-proportion="-0.65384614">
@@ -1006,13 +978,6 @@
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="10" selection-start="914" selection-end="914" vertical-scroll-proportion="-14.846154">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/movies/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="0" selection-start="1396" selection-end="1396" vertical-scroll-proportion="-18.115385">
           <folding />
         </state>
       </provider>
@@ -1047,7 +1012,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/movie.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="20" selection-start="778" selection-end="778" vertical-scroll-proportion="0.37205386">
+        <state line="25" column="20" selection-start="778" selection-end="778" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tags/_bar.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="57" selection-start="222" selection-end="222" vertical-scroll-proportion="0.029929578">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/movies/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="0" selection-start="1396" selection-end="1396" vertical-scroll-proportion="-18.115385">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/logs/_accordion_report.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="78" selection-start="1646" selection-end="1646" vertical-scroll-proportion="0.79049295">
           <folding />
         </state>
       </provider>
