@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110325203408) do
+ActiveRecord::Schema.define(:version => 20110326030532) do
 
   create_table "conditions", :force => true do |t|
     t.string   "kind"
@@ -36,6 +36,17 @@ ActiveRecord::Schema.define(:version => 20110325203408) do
   add_index "delayed_jobs", ["locked_by"], :name => "delayed_jobs_locked_by"
   add_index "delayed_jobs", ["priority", "run_at"], :name => "delayed_jobs_priority"
 
+  create_table "logs", :force => true do |t|
+    t.string   "title"
+    t.string   "controller"
+    t.string   "action"
+    t.string   "loggable_type"
+    t.integer  "loggable_id"
+    t.boolean  "read",          :default => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "movies", :force => true do |t|
     t.string   "name"
     t.integer  "length"
@@ -43,6 +54,7 @@ ActiveRecord::Schema.define(:version => 20110325203408) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "tagged",      :default => false
+    t.string   "state"
   end
 
   create_table "movies_views", :id => false, :force => true do |t|
@@ -85,6 +97,7 @@ ActiveRecord::Schema.define(:version => 20110325203408) do
     t.integer  "order"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.float    "time"
   end
 
   create_table "views", :force => true do |t|

@@ -15,7 +15,6 @@ class DropboxController < ApplicationController
     end
     end
     @files.compact!
-    puts @files
   end
 
   def add
@@ -31,7 +30,7 @@ class DropboxController < ApplicationController
     Dir.new(dir).entries.each do |f|
       if not File.directory?(dir+ "/" + f) and ACCEPTED_EXT.include? File.extname(f).downcase
         sf = process_file(dir+ "/" + f)
-        Movie.create(:name => sf.original_name, :system_files => [sf]).delay.generate_thumbnail
+        Movie.create(:name => sf.original_name, :system_files => [sf]).delay.process
       else unless File.directory?(dir+ "/" + f)
         reject_file(dir+ "/" +f)
            end
@@ -47,7 +46,11 @@ class DropboxController < ApplicationController
     ft = file.split('.').last
     path = "public/library/"+n+"." + ft
     FileUtils.mv(file,path)
-    s = SystemFile.create(:original_name => File.basename(file), :name => n, :file_type => ft,:path => path)
+    unless File.exists?(path)
+      Log.create(:title=>"Move from dropbox to library failed",:controller=>'dropbox',:action=>"process_file")
+    else
+      s = SystemFile.create(:original_name => File.basename(file), :name => n, :file_type => ft,:path => path)
+    end
   end
 
   def reject_file(file)

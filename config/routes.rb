@@ -1,4 +1,6 @@
 MBrowser7::Application.routes.draw do
+  resources :logs
+
   resources :views do
     resource :conditions
   end

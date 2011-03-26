@@ -1,0 +1,31 @@
+<h1>Listing logs</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Controller</th>
+    <th>Action</th>
+    <th>Loggable type</th>
+    <th>Loggable</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @logs.each do |log| %>
+  <tr>
+    <td><%= log.title %></td>
+    <td><%= log.controller %></td>
+    <td><%= log.action %></td>
+    <td><%= log.loggable_type %></td>
+    <td><%= log.loggable_id %></td>
+    <td><%= link_to 'Show', log %></td>
+    <td><%= link_to 'Edit', edit_log_path(log) %></td>
+    <td><%= link_to 'Destroy', log, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Log', new_log_path %>

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @log.title %>
+</p>
+
+<p>
+  <b>Controller:</b>
+  <%= @log.controller %>
+</p>
+
+<p>
+  <b>Action:</b>
+  <%= @log.action %>
+</p>
+
+<p>
+  <b>Loggable type:</b>
+  <%= @log.loggable_type %>
+</p>
+
+<p>
+  <b>Loggable:</b>
+  <%= @log.loggable_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_log_path(@log) %> |
+<%= link_to 'Back', logs_path %>
