@@ -5,9 +5,6 @@
     <%= form.input :system_file,
                    :as => :check_boxes,
                    :collection => Hash[SystemFile.where(:storable_id => nil).collect{|f| [f.original_name, f.id]}]%>
-    <% else %>
-    <%= form.input :system_file,
-                   :as => :check_boxes%>
             <% end %>
     <%= form.input :tag_list, :as => :string %>
         <% end %>
