@@ -5,7 +5,12 @@ class Thumbnail < ActiveRecord::Base
   after_create :make_thumbs
 
   def big_path
-    return  '/' + self.system_files[0].path.split('/')[1..-1].join('/')
+    unless self.system_files.empty?
+      return  '/' + self.system_files[0].path.split('/')[1..-1].join('/')
+    else
+      return "#"
+    end
+    
   end
 
   def generate(offset=0)
