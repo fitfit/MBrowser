@@ -7,8 +7,9 @@ class MoviesController < ApplicationController
 #    end
 #    @page = session[:page]
 #    @movies = Movie.paginate :page => session[:page], :per_page => 24
+    if params[:view].nil? then params[:view] = View.find_by_name('Newest').id end
     m = View.find(session[:view]).get_movies
-    @nb = m.count
+    @nb_row = (m.count/6).to_i + 1
     @movies = m.paginate :page => params[:page], :per_page => 24
 
     respond_to do |format|

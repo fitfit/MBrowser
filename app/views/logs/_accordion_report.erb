@@ -1,0 +1,50 @@
+<script>
+  $(document).ready(function()
+{
+          $("#accordion").accordion();
+          //$("#accordion").accordion('activate',1);
+
+
+      $('#read_all_link').button();
+      $('#read_all_link').click(function(){
+          $.ajax({
+            type: "POST",
+            url: "<%= logs_read_all_path%>",
+            context: $(this),
+           success: function(msg){
+               /**$.get('<%= logs_path %>', function(data) {
+
+                 $('#logs_report').fadeOut();
+                 $('#logs_report').html(data);
+                 $('#logs_report').fadeIn()
+               });**/
+                $('#read_all_link').fadeOut();
+           }
+          });
+      });
+    });
+  </script>
+  <div id="accordion">
+    <h5 id="read_all_pane"><a href="#">Mark all as read</a></h5>
+    <div >
+        <button id="read_all_link">Confirm</button>
+    </div>
+    <% Log.where(:read => false).limit(amount-1).each do |l| %>
+        <h5><a href="#"><%= truncate(l.title, :length => 35, :omission => "...") %></a></h5>
+
+        <div class="inside" style="padding-left:5px;padding-right:5px;">
+
+            <b>Controller</b><br>
+            <%= l.controller %>
+            <div class="clear"></div>
+            <b>Action</b><br>
+            <%= l.action %>
+            <div class="clear"></div>
+            <b>Description</b><br>
+            <%= l.title %>
+            <div class="clear"></div>
+            <%= link_to l.loggable.name, movie_path(l.loggable) %>
+
+        </div>
+    <% end %>
+  </div>

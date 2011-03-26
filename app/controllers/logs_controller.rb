@@ -21,6 +21,14 @@ class LogsController < ApplicationController
     end
   end
 
+  def read_all
+    Log.all.each do |l|
+      l.read = true
+      l.save!
+    end
+    render :nothing=>true
+  end
+
   # GET /logs/new
   # GET /logs/new.xml
   def new

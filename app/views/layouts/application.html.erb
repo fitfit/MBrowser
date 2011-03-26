@@ -15,18 +15,16 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-<span><%= unless controller.controller_name == "system_files" then  link_to "Files",:controller => "system_files", :action => "index" else render :inline => "<b>Files</b>"  end %></span>
-<span><%= unless controller.controller_name == "movies" then  link_to "Movies", :controller => "movies", :action => "index" else render :inline => "<b>Movies</b>" end %></span>
-<span><%= unless controller.controller_name == "dropbox" then  link_to "Dropbox", :controller => "dropbox", :action => "show" else render :inline => "<b>Dropbox</b>" end %></span>
-<span><%= unless controller.controller_name == "tags" then  link_to "Tags", :controller => "tags", :action => "index" else render :inline => "<b>Tags</b>" end %></span>
-<span><%= unless controller.controller_name == "tagging_room" then  link_to "Tagging Room", :controller => "tagging_room", :action => "index" else render :inline => "<b>Tagging Room</b>" end %></span>
-<div class="main">
-  <div class="g160 inside" style="">
-    <%= render :partial => 'movies/bar', :local => params %>
-    <%= render :partial => 'views/bar', :local => params %>
-  </div>
+<div id="container">
+<div id="scrollbox" style="overflow:auto; overflow-x:hidden;" >
+<div class="main" style="height:700px">
+  <%= render :partial => 'navigation/left_column', :local => params %>
+  <div class="g960 inside">
 <%= yield %>
     </div>
-
+  <%= render :partial => 'navigation/right_column', :local => params %>
+</div>
+    </div>
+</div>
 </body>
 </html>

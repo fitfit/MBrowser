@@ -1,0 +1,1 @@
+<h3><%= unless controller.controller_name == "system_files" then  link_to "Files", :controller => "system_files", :action => "index" else render :inline => "<b>Files</b>" end %></h3>

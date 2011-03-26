@@ -1,0 +1,2 @@
+<h3><%= unless controller.controller_name == "tags" then  link_to "Tags", :controller => "tags", :action => "index" else render :inline => "<b>Tags</b>" end %></h3>
+<h3><%= unless controller.controller_name == "tagging_room" then  link_to "Tag Room", :controller => "tagging_room", :action => "index" else render :inline => "<b>Tag Room</b>" end %></h3>

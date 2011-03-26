@@ -1,0 +1,1 @@
+<h3><%= unless controller.controller_name == "dropbox" then  link_to "Dropbox", :controller => "dropbox", :action => "show" else render :inline => "<b>Dropbox</b>" end %></h3>

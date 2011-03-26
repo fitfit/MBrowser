@@ -1,124 +1,122 @@
 <script type="text/javascript" charset="utf-8">
-    $(document).ready(function()
-    {
-        function highlight_tagged(obj){
-            obj.addClass( "ui-state-highlight" )
-                            .find( "div span" )
-                            .html( "Tagged <%= "" %>");
-            obj.find( "div:first" ).append('<button class="untag_button " style="float:right;width:20px;height:20px;"><span style="font-size: 0.7em">x</span></button>');
-            $(".untag_button").each(function(){
+    $(document).ready(function() {
+        function highlight_tagged(obj) {
+            obj.addClass("ui-state-highlight")
+                    .find("div span")
+                    .html(" <%= "".html_safe %>");
+            obj.find("div:first").append('<button class="untag_button ui-button ui-button-text-only ui-widget ui-state-default ui-corner-all" style="width:18px;height:18px;padding:2px;float:right;"><span class="ui-button-text" style="line-height:0.9;padding:0;">x</span></button>');
+            $(".untag_button").each(function() {
                 tag = $(this.parentNode.parentNode).attr('id');
-                make_untag_button($(this),tag);
+                make_untag_button($(this), tag);
             });
 
         }
 
-        function make_droppable(obj){
-          obj.droppable({
+        function make_droppable(obj) {
+            obj.droppable({
                 greedy: true,
                 hoverClass: "ui-state-active",
-                drop: function( event, ui ) {
+                drop: function(event, ui) {
 
-                    d = "tag="+$(this).attr('id') +"&movie="+ui.draggable.attr('id');
+                    d = "tag=" + $(this).attr('id') + "&movie=" + ui.draggable.attr('id');
                     $.ajax({
-                       type: "POST",
-                       url: "tagging_room/tag",
-                       data: d,
-                       context: $(this),
-                       success: function(msg){
-                         highlight_tagged($( this ));
-                       }
-                     });
+                        type: "POST",
+                        url: "tagging_room/tag",
+                        data: d,
+                        context: $(this),
+                        success: function(msg) {
+                            highlight_tagged($(this));
+                        }
+                    });
                 }
             });
         }
 
-        function make_untag_button(obj,tag){
-            obj.button();
+        function make_untag_button(obj, tag) {
+            //obj.button();
             obj.click(function() {
-                d = "tag="+tag +"&movie=" + <%= @movie.id %>;
-                    $.ajax({
-                       type: "POST",
-                       url: "tagging_room/untag",
-                       data: d,
-                       context: $(this),
-                       success: function(msg){
-                         $("#"+tag).removeClass( "ui-state-highlight" ).find( "div span" ).html( "<br>");
-                          $("#"+tag).removeClass( "ui-state-highlight" ).find( "div button" ).remove();
-                       }
-                     });
+                d = "tag=" + tag + "&movie=" + <%= @movie.id %>;
+                $.ajax({
+                    type: "POST",
+                    url: "tagging_room/untag",
+                    data: d,
+                    context: $(this),
+                    success: function(msg) {
+                        $("#" + tag).removeClass("ui-state-highlight").find("div span").html("");
+                        $("#" + tag).removeClass("ui-state-highlight").find("div button").remove();
+                    }
+                });
 
             });
         }
 
 
-		<% s2='"' %>
+        <% s2='"' %>
         <% @movie.tag_list.each_with_index do |t,i| %>
-            <% s2+= '#' + t %>
-            <% if i < @movie.tag_list.size  - 1 then s2 += ' , '  else s2 += '"' end%>
+        <% s2+= '#' + t %>
+        <% if i < @movie.tag_list.size  - 1 then s2 += ' , '  else s2 += '"' end%>
         <% end %>
         <% unless @movie.tag_list.empty? %>
         highlight_tagged($(<%= s2.html_safe %>));
         <% end %>
 
-        $( ".draggable" ).draggable({
-			cursor: "move",
-			cursorAt: { top: 0, left: 150 },
-			helper: function( event ) {
-				return $( "<div class='ui-widget-header' style=\"width:300px\"><%= @movie.name %></div>" );
-			}
-		});
+        $(".draggable").draggable({
+            cursor: "move",
+            cursorAt: { top: 0, left: 150 },
+            helper: function(event) {
+                return $("<div class='ui-widget-header' style=\"width:300px\"><%= @movie.name %></div>");
+            }
+        });
 
-        $( '.droppable').each(function(){
+        $('.droppable').each(function() {
             make_droppable($(this));
         });
 
-        $( "#progressbar" ).progressbar({
+        $("#progressbar").progressbar({
             value:<%= (@tagged_count.to_f/@movies_count.to_f)*100 %>
-            });
-        $( "#create_tag_button" ).button();
-        $( "#create_tag_button").click(function() {
+        });
+        $("#create_tag_button").button();
+        $("#create_tag_button").click(function() {
             tag = $("#tag").attr('value');
             $("#tag").val("");
             $("#col4").prepend(
-                '<div  class="droppable ui-widget-header" id="'+tag+'">'+
-                  '<p>'+tag+'</p>'+
-                '</div>'+
-                '<div class="clear">&nbsp;</div>'
+                    '<div  class="droppable ui-widget-header" id="' + tag + '">' +
+                            '<p>' + tag + '</p>' +
+                            '</div>' +
+                            '<div class="clear">&nbsp;</div>'
                     );
-            make_droppable($("#"+tag));
+            make_droppable($("#" + tag));
         });
 
     });
 </script>
-
-<div id="content">
-  <div class="g960">
-  <div id="progressbar" class="g480 inside"></div>
-  <div class="g480 inside" style="text-align:center"><%= @tagged_count.to_s + " / " + @movies_count.to_s %></div>
-  <div class="clear"></div>
-  <div class="inside g80" id="col1">
-    <%= tag_boxes_for(@tags[0..10]) %>
-  </div>
-  <div class="g80" id="col2">
-    <%= tag_boxes_for(@tags[11..22]) %>
+<div id="progressbar" class="g480 inside"></div>
+<div class="g480 inside" style="text-align:center">
+  <%= @tagged_count.to_s + " / " + @movies_count.to_s %>
+</div>
+<div class="clear"></div>
+<div class="inside g80" id="col1">
+  <%= tag_boxes_for(@tags[0..10]) %>
+</div>
+<div class="g80" id="col2">
+  <%= tag_boxes_for(@tags[11..22]) %>
 </div>
 
-  <div class="g640">
-    <div  class="ui-widget-header inside g320">
-            <input id="tag" size="15">
-          <button id="create_tag_button">Create tag</button>
-    </div>
-    <div  class="inside g320">   
+<div class="g640">
+  <div class="ui-widget-header inside g320">
+    <input id="tag" size="15">
+    <button id="create_tag_button">Create tag</button>
+  </div>
+  <div class="inside g320">
 
-      <span style="float:right"><%= link_to "I'm done, Next!", tagging_room_path %></span>
+    <span style="float:right"><%= link_to "I'm done, Next!", tagging_room_path %></span>
       <span style="float:left;margin-left:30px;margin-right:30px">
-        <%= link_to image_tag("vlc.png"), system_file_path(@movie.system_files.first), :remote => true %>
+        <%= link_to image_tag("vlc.png"), system_file_path(@movie.system_file), :remote => true %>
       </span>
-        </div>
-    <div class="clear">&nbsp;</div>
-    <div id="<%= @movie.id %>" class="draggable ui-widget-content" >
-      <h1><%= @movie.name %></h1>
+  </div>
+  <div class="clear">&nbsp;</div>
+  <div id="<%= @movie.id %>" class="draggable ui-widget-content">
+    <h1><%= @movie.name %></h1>
 
     <% @movie.thumbnails.each_with_index do |t, i| %>
         <% if i%2 == 0 %>
@@ -127,11 +125,10 @@
         <%= image_tag "#{t.big_path}", :width => 300 %>
     <% end %>
   </div>
-    </div>
-  <div class="g80" id="col3">
-    <%= tag_boxes_for(@tags[22..32]) %>
-  </div>
-  <div class="g80" id="col4">
-    <%= tag_boxes_for(@tags[33..43]) %>
-  </div>
+</div>
+<div class="g80" id="col3">
+  <%= tag_boxes_for(@tags[22..32]) %>
+</div>
+<div class="g80" id="col4">
+  <%= tag_boxes_for(@tags[33..43]) %>
 </div>

@@ -1,7 +1,10 @@
 <% @movies.each_with_index do |movie,i| %>
 
     <script type="text/javascript" charset="utf-8">
-
+    function updatestatus(){
+	//Show number of loaded items
+	$('#status').text('Loaded '+ nb_loaded_items +' Items');
+    }
     $(document).ready(function()
     {
         $("#<%= movie.id %>").hide();
@@ -12,12 +15,13 @@
             context: $(this),
            success: function(msg){
              	$("#<%= movie.id %>").html(msg).fadeIn();
+               nb_loaded_items += 1;
                updatestatus();
            }
          });
     });
       </script>
-    <div id="<%= movie.id %>" class="rounded-corners g160 ui-widget-content<%=if i==0 then ' inside' end%>" style="height:200px">
+    <div id="<%= movie.id %>" class="g160 <%=if i==0 then ' inside' end%> rounded-corners ui-widget-content" style="height:200px<%=if i==0 then ';margin-left:0px;' end%>">
       </div>
 
 <% end %>

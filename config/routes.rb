@@ -1,4 +1,5 @@
 MBrowser7::Application.routes.draw do
+  post "logs/read_all", :as => 'logs_read_all'
   resources :logs
 
   resources :views do

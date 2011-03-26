@@ -4,12 +4,13 @@ module TaggingRoomHelper
     unless tags.nil?
       tags.each do |t|
         s += %{<div  class="droppable ui-widget-header" id="#{t.name}">
+          <div>
+            <span></span>
+          </div>
+<br>
           <div style="text-align:center">
             <b>#{t.name}</b>
 
-          </div>
-          <div>
-            <span><br></span>
           </div>
         </div>
         <div class="clear"></div>}
