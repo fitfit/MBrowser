@@ -1,7 +1,9 @@
 class ThumbPurgeJob
   def perform
     Thumbnail.all.each do |t|
-      t.destroy
+      if t.tnable.nil?
+        t.destroy
+      end
     end
   end
 end
