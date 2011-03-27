@@ -3,12 +3,12 @@
     <script type="text/javascript" charset="utf-8">
     function updatestatus(){
 	//Show number of loaded items
-	$('#status').text('Loaded '+ nb_loaded_items +' Items');
+	    $('#status').text('Loaded '+ nb_loaded_items +' Items');
     }
     $(document).ready(function()
     {
         $("#<%= movie.id %>").hide();
-        $("#<%= movie.id %>").html('<%= image_tag "loading.gif", :width =>130 %>');
+        //$("#<%= movie.id %>").html('<%= image_tag "loading.gif", :width =>130 %>');
         $.ajax({
             type: "GET",
             url: "<%= movie_thumb_path(movie)%>",
@@ -17,6 +17,7 @@
              	$("#<%= movie.id %>").html(msg).fadeIn();
                nb_loaded_items += 1;
                updatestatus();
+               <%=if i==@movies.count-1 then 'loading_lock = false;' end%>
            }
          });
     });

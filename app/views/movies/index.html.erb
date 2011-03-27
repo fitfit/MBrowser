@@ -1,48 +1,54 @@
 <script type="text/javascript" charset="utf-8">
-$(document).ready(function()
-{
-	//updatestatus();
-	scrollalert();
-});
-//var totalItems=<%= @page.to_i*4 %>;
-var nb_loaded_items=0;
-var last_loaded_row=0;
-var nb_row =<%= @nb_row%>;
-function scrollalert(){
-	var scrolltop=$('#scrollbox').attr('scrollTop');
-	var scrollheight=$('#scrollbox').attr('scrollHeight');
-	var windowheight=$('#scrollbox').attr('clientHeight');
-	var scrolloffset=100;
-	if(scrolltop>=(scrollheight-(windowheight+scrolloffset)) && last_loaded_row < nb_row)
-	{
-		//fetch new items
-		//$('#status').text('Loading more items...');
-        $.ajax({
-           type: "GET",
-           url: '<%= movie_row_path %>',
-           data: "page="+(++last_loaded_row),
-           context: $(this),
-           success: function(msg){
-               s = msg
-               if(last_loaded_row>=3){
-                $('.main').animate({height:'+=200'},2000);
-               }
-               $('#content').append(s);
-               //totalItems += 1;
-               //updatestatus();
-           }
-         });
-	}
-	setTimeout('scrollalert();', 1500);
-}
-  </script>
+    $(document).ready(function() {
+        //updatestatus();
+        scrollalert();
+    });
+    //var totalItems=<%= @page.to_i*4 %>;
+    var nb_loaded_items = 0;
+    var last_loaded_row = 0;
+    var loading_lock = 0;
+    var nb_row =<%= @nb_row%>;
+    function scrollalert() {
+        var scrolltop = $(document).scrollTop();
+        //alert(scrolltop);
+        var scrollheight = $('#content').attr('scrollHeight');
+        //alert(scrollheight);
+        var windowheight = $(window).height();
+        //alert(windowheight);
+        var scrolloffset = 100;
+        if (scrolltop >= (scrollheight - (windowheight + scrolloffset))&& !loading_lock ) {
+            //fetch new items
+            //$('#status').text('Loading more items...');
+            $.ajax({
+                type: "GET",
+                url: '<%= movie_row_path %>',
+                data: "page=" + (++last_loaded_row),
+                context: $(this),
+                success: function(msg) {
+                    s = msg
+                    if (last_loaded_row >= 3) {
+                        $('.main').animate({height:'+=200'}, 2000);
+                    }
+                    $('#content').append(s);
+                    loading_lock = true;
+                    //totalItems += 1;
+                    //updatestatus();
+                }
+            });
+        }
+        if (last_loaded_row < nb_row) {
+
+            setTimeout('scrollalert();', 1500);
+        }
+    }
+</script>
 
 <h1>Listing movies</h1>
 <span id="status" style="float:right"></span>
 
 <%= link_to 'Skip 120', movies_path(:offset=>20) %>
-		<div id="content" >
-		</div>
+<div id="content">
+</div>
 
 
 
