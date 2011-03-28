@@ -1,11 +1,5 @@
-<p>
-  <b>Thumbnails:</b>
 
 <% @movie.thumbnails.each_with_index do |t, i| %>
-    <% if i%5 == 0 %>
-        </br>
-    <% end %>
     <%= image_tag "#{t.big_path}", :width => 150 %>
 
-    <% end %>
-  </p>
+<% end %>

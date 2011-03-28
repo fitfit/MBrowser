@@ -8,6 +8,7 @@
     $(document).ready(function()
     {
         $("#<%= movie.id %>").hide();
+
         //$("#<%= movie.id %>").html('<%= image_tag "loading.gif", :width =>130 %>');
         $.ajax({
             type: "GET",

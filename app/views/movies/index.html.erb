@@ -1,11 +1,41 @@
 <script type="text/javascript" charset="utf-8">
     $(document).ready(function() {
         //updatestatus();
+        makeButtons();
         scrollalert();
+
     });
+
+    function makeButtons(){
+        $('#speed_normal').button();
+        $('#speed_normal').button('disable');
+        $('#speed_normal').click(function(){
+           scrolloffset = 100;
+           $('#speed_normal').button('disable');
+           $('#speed_fast').button('enable');
+            $('#speed_faster').button('enable');
+        });
+
+        $('#speed_fast').button();
+        $('#speed_fast').click(function(){
+           scrolloffset = 800;
+            $('#speed_normal').button('enable');
+           $('#speed_fast').button('disable');
+            $('#speed_faster').button('enable');
+        });
+
+        $('#speed_faster').button();
+        $('#speed_faster').click(function(){
+           scrolloffset = 1600;
+           $('#speed_normal').button('enable');
+           $('#speed_fast').button('enable');
+            $('#speed_faster').button('disable');
+        });
+    }
     //var totalItems=<%= @page.to_i*4 %>;
     var nb_loaded_items = 0;
     var last_loaded_row = 0;
+    var scrolloffset = 100;
     var loading_lock = 0;
     var nb_row =<%= @nb_row%>;
     function scrollalert() {
@@ -15,7 +45,7 @@
         //alert(scrollheight);
         var windowheight = $(window).height();
         //alert(windowheight);
-        var scrolloffset = 100;
+
         if (scrolltop >= (scrollheight - (windowheight + scrolloffset))&& !loading_lock ) {
             //fetch new items
             //$('#status').text('Loading more items...');
@@ -37,16 +67,17 @@
             });
         }
         if (last_loaded_row < nb_row) {
-
             setTimeout('scrollalert();', 1500);
         }
     }
 </script>
 
 <h1>Listing movies</h1>
-<span id="status" style="float:right"></span>
+<div  style="float:right"><b>Loading: </b><button id="speed_normal">Normal</button><button id="speed_fast">Fast</button><button id="speed_faster">Faster</button>
+ | <span id="status"></span></div>
 
 <%= link_to 'Skip 120', movies_path(:offset=>20) %>
+<div class="clear"></div>
 <div id="content">
 </div>
 

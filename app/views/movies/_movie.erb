@@ -1,7 +1,22 @@
-
+ <script type="text/javascript" charset="utf-8">
+  $(document).ready(function()
+    {
+       $('#movie_img_<%=movie.id%>').click(function(){
+          $('#thumbnails').fadeOut();
+        $.ajax({
+            type: "GET",
+            url: "<%= movie_thumbs_path(movie)%>",
+            context: $(this),
+           success: function(msg){
+             	$('#thumbnails').html(msg).fadeIn();
+           }
+         });
+       });
+    });
+</script>
 <h3 style="text-align:center"><%= link_to truncate(movie.name, :length => 12, :omission => "..."), edit_movie_path(movie) %></h3>
 <% unless movie.thumbnails[2].nil? %>
-    <a href="#" rel="<%= movie_thumbs_path(movie) %>" name="<%= movie.name %>"><%= image_tag("#{movie.thumbnails[2].big_path}", :width => 145, :height => 90) %></a>
+    <a id="movie_img_<%=movie.id%>" href="#" rel="<%= movie_thumbs_path(movie) %>" name="<%= movie.name %>"><%= image_tag("#{movie.thumbnails[2].big_path}", :width => 145, :height => 90) %></a>
 <% end %>
 <div class="g80 inside">
   <% l = movie.fancy_length %>

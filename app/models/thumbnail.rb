@@ -8,7 +8,7 @@ class Thumbnail < ActiveRecord::Base
     unless self.system_files.empty?
       return  '/' + self.system_files[0].path.split('/')[1..-1].join('/')
     else
-      return "#"
+      return "not_available.jpg"
     end
     
   end
@@ -26,6 +26,7 @@ class Thumbnail < ActiveRecord::Base
     unless self.exists?
       Log.create(:title=>"Tried to create thumbnail but file still does not exists",:controller=>'thumbnail',:action=>"generate",:loggable =>self)
     end
+    self.save!
   end
 
   def exists?
