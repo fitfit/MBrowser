@@ -41,7 +41,7 @@ class MoviesController < ApplicationController
   end
 
   def thumbs
-    @movie = Movie.find(params[:id])
+    @movie = Movie.includes(:thumbnails).find(params[:id])
     render :partial => 'thumbnails'
   end
 
