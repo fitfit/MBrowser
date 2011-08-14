@@ -1,6 +1,6 @@
 class Movie < ActiveRecord::Base
   include ActiveRecord::Transitions
-  has_one :system_file, :class_name =>"SystemFile", :as => :storable, :dependent => :nullify
+  has_one :system_file, :class_name =>"SystemFile", :as => :storable, :dependent => :destroy
   has_many :thumbnails, :as => :tnable, :dependent => :destroy
   has_many :logs, :as => :loggable, :dependent => :destroy
   has_and_belongs_to_many :views

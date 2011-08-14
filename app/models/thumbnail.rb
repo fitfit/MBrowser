@@ -18,10 +18,10 @@ class Thumbnail < ActiveRecord::Base
     m = ((self.time - h*3600)/60).to_i
     s = (self.time)%60
     new_path = tnable.system_file.path.split('.')[0..-2].join('.')
-    n= tnable.name
-    system_files << SystemFile.create(:original_name => n.split('.')[0..-2].join('.') +"_thumb" + order.to_s ,:name => n.split('.')[0..-2].join('.') + "_t" + order.to_s, :file_type => "jpg",:path => new_path + "_t" + order.to_s + ".jpg")
+    n= tnable.system_file.name
+    system_files << SystemFile.create(:original_name => tnable.name.split('.')[0..-2].join('.') +"_thumb" + order.to_s ,:name => n.split('.')[0..-2].join('.') + "_t" + order.to_s, :file_type => "jpg",:path => new_path + "_t" + order.to_s + ".jpg")
 
-    `\"./bin/ffmpeg.exe\" 2>&1 -ss #{h}:#{m}:#{s} -s 400x300  -i #{tnable.system_file.path} -f image2 #{self.system_files[0].path}`
+    `\"./bin/ffmpeg.exe\" 2>&1 -ss #{h}:#{m}:#{s} -i #{tnable.system_file.path} -f image2 #{self.system_files[0].path}`
 
     unless self.exists?
       Log.create(:title=>"Tried to create thumbnail but file still does not exists",:controller=>'thumbnail',:action=>"generate",:loggable =>self)
