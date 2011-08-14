@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8a98e3f-1060-4f79-b505-8dc70d58a075" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20110814152512_clean_up_library_folder.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/dropbox_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/dropbox_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/movies_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/movies_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/movie.rb" afterPath="$PROJECT_DIR$/app/models/movie.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/system_file.rb" afterPath="$PROJECT_DIR$/app/models/system_file.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/thumbnail.rb" afterPath="$PROJECT_DIR$/app/models/thumbnail.rb" />
     </list>
     <ignored path="MBrowser7.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -21,6 +17,82 @@
     <ignored path=".idea/.rakeTasks" />
     <ignored path=".idea/MBrowser7.iml" />
     <ignored path=".idea/misc.xml" />
+    <ignored path="public/library/2009-7/3c069af1-a851-012e-f02f-00ff815e7d15/3c069af1-a851-012e-f02f-00ff815e7d15_t7.jpg" />
+    <ignored path="public/library/2009-7/3c069af1-a851-012e-f02f-00ff815e7d15/3c069af1-a851-012e-f02f-00ff815e7d15_t6.jpg" />
+    <ignored path="public/library/2009-7/3c069af1-a851-012e-f02f-00ff815e7d15/3c069af1-a851-012e-f02f-00ff815e7d15_t9.jpg" />
+    <ignored path="public/library/2009-7/3c069af1-a851-012e-f02f-00ff815e7d15/3c069af1-a851-012e-f02f-00ff815e7d15_t8.jpg" />
+    <ignored path="public/library/2009-7/3c069af1-a851-012e-f02f-00ff815e7d15/3c069af1-a851-012e-f02f-00ff815e7d15_t3.jpg" />
+    <ignored path="public/library/2009-7/3c069af1-a851-012e-f02f-00ff815e7d15/3c069af1-a851-012e-f02f-00ff815e7d15_t2.jpg" />
+    <ignored path="public/library/2009-7/3c069af1-a851-012e-f02f-00ff815e7d15/3c069af1-a851-012e-f02f-00ff815e7d15_t5.jpg" />
+    <ignored path="public/library/2009-7/3c069af1-a851-012e-f02f-00ff815e7d15/3c069af1-a851-012e-f02f-00ff815e7d15_t4.jpg" />
+    <ignored path="public/library/2009-7/3ccd4cc0-a851-012e-f035-00ff815e7d15/3ccd4cc0-a851-012e-f035-00ff815e7d15_t7.jpg" />
+    <ignored path="public/library/2009-7/3c3bc9f0-a851-012e-f031-00ff815e7d15/3c3bc9f0-a851-012e-f031-00ff815e7d15_t3.jpg" />
+    <ignored path="public/library/2009-7/3c069af1-a851-012e-f02f-00ff815e7d15/3c069af1-a851-012e-f02f-00ff815e7d15_t1.jpg" />
+    <ignored path="public/library/2009-7/3c069af1-a851-012e-f02f-00ff815e7d15/3c069af1-a851-012e-f02f-00ff815e7d15.wmv" />
+    <ignored path="public/library/2009-7/3b87f0e0-a851-012e-f02d-00ff815e7d15/3b87f0e0-a851-012e-f02d-00ff815e7d15_t0.jpg" />
+    <ignored path="public/library/2009-7/3c069af1-a851-012e-f02f-00ff815e7d15/3c069af1-a851-012e-f02f-00ff815e7d15_t0.jpg" />
+    <ignored path="public/library/2009-7/3bd2a471-a851-012e-f02e-00ff815e7d15/3bd2a471-a851-012e-f02e-00ff815e7d15_t3.jpg" />
+    <ignored path="public/library/2009-7/3b87f0e0-a851-012e-f02d-00ff815e7d15/3b87f0e0-a851-012e-f02d-00ff815e7d15_t7.jpg" />
+    <ignored path="public/library/2009-7/3c3bc9f0-a851-012e-f031-00ff815e7d15/3c3bc9f0-a851-012e-f031-00ff815e7d15_t0.jpg" />
+    <ignored path="public/library/2009-7/3b87f0e0-a851-012e-f02d-00ff815e7d15/3b87f0e0-a851-012e-f02d-00ff815e7d15_t9.jpg" />
+    <ignored path="public/library/2009-7/3d277da1-a851-012e-f036-00ff815e7d15/3d277da1-a851-012e-f036-00ff815e7d15_t6.jpg" />
+    <ignored path="public/library/2009-7/3d277da1-a851-012e-f036-00ff815e7d15/3d277da1-a851-012e-f036-00ff815e7d15_t7.jpg" />
+    <ignored path="public/library/2009-7/3d277da1-a851-012e-f036-00ff815e7d15/3d277da1-a851-012e-f036-00ff815e7d15_t8.jpg" />
+    <ignored path="public/library/2009-7/3ccd4cc0-a851-012e-f035-00ff815e7d15/3ccd4cc0-a851-012e-f035-00ff815e7d15.wmv" />
+    <ignored path="public/library/2009-7/3ccd4cc0-a851-012e-f035-00ff815e7d15/3ccd4cc0-a851-012e-f035-00ff815e7d15_t0.jpg" />
+    <ignored path="public/library/2009-7/3ccd4cc0-a851-012e-f035-00ff815e7d15/3ccd4cc0-a851-012e-f035-00ff815e7d15_t2.jpg" />
+    <ignored path="public/library/2009-7/3ccd4cc0-a851-012e-f035-00ff815e7d15/3ccd4cc0-a851-012e-f035-00ff815e7d15_t3.jpg" />
+    <ignored path="public/library/2009-7/3ccd4cc0-a851-012e-f035-00ff815e7d15/3ccd4cc0-a851-012e-f035-00ff815e7d15_t4.jpg" />
+    <ignored path="public/library/2009-7/3c78d4e0-a851-012e-f033-00ff815e7d15/3c78d4e0-a851-012e-f033-00ff815e7d15_t7.jpg" />
+    <ignored path="public/library/2009-7/3c78d4e0-a851-012e-f033-00ff815e7d15/3c78d4e0-a851-012e-f033-00ff815e7d15_t8.jpg" />
+    <ignored path="public/library/2009-7/3d277da1-a851-012e-f036-00ff815e7d15/3d277da1-a851-012e-f036-00ff815e7d15.wmv" />
+    <ignored path="public/library/2009-7/3d277da1-a851-012e-f036-00ff815e7d15/3d277da1-a851-012e-f036-00ff815e7d15_t1.jpg" />
+    <ignored path="public/library/2009-7/3d277da1-a851-012e-f036-00ff815e7d15/3d277da1-a851-012e-f036-00ff815e7d15_t2.jpg" />
+    <ignored path="public/library/2009-7/3d277da1-a851-012e-f036-00ff815e7d15/3d277da1-a851-012e-f036-00ff815e7d15_t3.jpg" />
+    <ignored path="public/library/2009-7/3d277da1-a851-012e-f036-00ff815e7d15/3d277da1-a851-012e-f036-00ff815e7d15_t4.jpg" />
+    <ignored path="public/library/2009-7/3d277da1-a851-012e-f036-00ff815e7d15/3d277da1-a851-012e-f036-00ff815e7d15_t5.jpg" />
+    <ignored path="public/library/2009-7/3c78d4e0-a851-012e-f033-00ff815e7d15/3c78d4e0-a851-012e-f033-00ff815e7d15_t9.jpg" />
+    <ignored path="public/library/2009-7/3d277da1-a851-012e-f036-00ff815e7d15/3d277da1-a851-012e-f036-00ff815e7d15_t0.jpg" />
+    <ignored path="public/library/2009-7/3bd2a471-a851-012e-f02e-00ff815e7d15/3bd2a471-a851-012e-f02e-00ff815e7d15_t1.jpg" />
+    <ignored path="public/library/2009-7/3bd2a471-a851-012e-f02e-00ff815e7d15/3bd2a471-a851-012e-f02e-00ff815e7d15_t9.jpg" />
+    <ignored path="public/library/2009-7/3ccd4cc0-a851-012e-f035-00ff815e7d15/3ccd4cc0-a851-012e-f035-00ff815e7d15_t1.jpg" />
+    <ignored path="public/library/2009-7/3ccd4cc0-a851-012e-f035-00ff815e7d15/3ccd4cc0-a851-012e-f035-00ff815e7d15_t6.jpg" />
+    <ignored path="public/library/2009-7/3ccd4cc0-a851-012e-f035-00ff815e7d15/3ccd4cc0-a851-012e-f035-00ff815e7d15_t5.jpg" />
+    <ignored path="public/library/2009-7/3ccd4cc0-a851-012e-f035-00ff815e7d15/3ccd4cc0-a851-012e-f035-00ff815e7d15_t9.jpg" />
+    <ignored path="public/library/2009-7/3ccd4cc0-a851-012e-f035-00ff815e7d15/3ccd4cc0-a851-012e-f035-00ff815e7d15_t8.jpg" />
+    <ignored path="public/library/2009-7/3c78d4e0-a851-012e-f033-00ff815e7d15/3c78d4e0-a851-012e-f033-00ff815e7d15.wmv" />
+    <ignored path="public/library/2009-7/3bd2a471-a851-012e-f02e-00ff815e7d15/3bd2a471-a851-012e-f02e-00ff815e7d15_t2.jpg" />
+    <ignored path="public/library/2009-7/3bd2a471-a851-012e-f02e-00ff815e7d15/3bd2a471-a851-012e-f02e-00ff815e7d15_t4.jpg" />
+    <ignored path="public/library/2009-7/3bd2a471-a851-012e-f02e-00ff815e7d15/3bd2a471-a851-012e-f02e-00ff815e7d15.wmv" />
+    <ignored path="public/library/2009-7/3bd2a471-a851-012e-f02e-00ff815e7d15/3bd2a471-a851-012e-f02e-00ff815e7d15_t0.jpg" />
+    <ignored path="public/library/2009-7/3bd2a471-a851-012e-f02e-00ff815e7d15/3bd2a471-a851-012e-f02e-00ff815e7d15_t7.jpg" />
+    <ignored path="public/library/2009-7/3bd2a471-a851-012e-f02e-00ff815e7d15/3bd2a471-a851-012e-f02e-00ff815e7d15_t8.jpg" />
+    <ignored path="public/library/2009-7/3bd2a471-a851-012e-f02e-00ff815e7d15/3bd2a471-a851-012e-f02e-00ff815e7d15_t5.jpg" />
+    <ignored path="public/library/2009-7/3bd2a471-a851-012e-f02e-00ff815e7d15/3bd2a471-a851-012e-f02e-00ff815e7d15_t6.jpg" />
+    <ignored path="public/library/2009-7/3b87f0e0-a851-012e-f02d-00ff815e7d15/3b87f0e0-a851-012e-f02d-00ff815e7d15_t2.jpg" />
+    <ignored path="public/library/2009-7/3b87f0e0-a851-012e-f02d-00ff815e7d15/3b87f0e0-a851-012e-f02d-00ff815e7d15_t3.jpg" />
+    <ignored path="public/library/2009-7/3b87f0e0-a851-012e-f02d-00ff815e7d15/3b87f0e0-a851-012e-f02d-00ff815e7d15.wmv" />
+    <ignored path="public/library/2009-7/3b87f0e0-a851-012e-f02d-00ff815e7d15/3b87f0e0-a851-012e-f02d-00ff815e7d15_t1.jpg" />
+    <ignored path="public/library/2009-7/3b87f0e0-a851-012e-f02d-00ff815e7d15/3b87f0e0-a851-012e-f02d-00ff815e7d15_t6.jpg" />
+    <ignored path="public/library/2009-7/3b87f0e0-a851-012e-f02d-00ff815e7d15/3b87f0e0-a851-012e-f02d-00ff815e7d15_t8.jpg" />
+    <ignored path="public/library/2009-7/3b87f0e0-a851-012e-f02d-00ff815e7d15/3b87f0e0-a851-012e-f02d-00ff815e7d15_t4.jpg" />
+    <ignored path="public/library/2009-7/3b87f0e0-a851-012e-f02d-00ff815e7d15/3b87f0e0-a851-012e-f02d-00ff815e7d15_t5.jpg" />
+    <ignored path="public/library/2009-7/3c78d4e0-a851-012e-f033-00ff815e7d15/3c78d4e0-a851-012e-f033-00ff815e7d15_t2.jpg" />
+    <ignored path="public/library/2009-7/3c78d4e0-a851-012e-f033-00ff815e7d15/3c78d4e0-a851-012e-f033-00ff815e7d15_t1.jpg" />
+    <ignored path="public/library/2009-7/3c78d4e0-a851-012e-f033-00ff815e7d15/3c78d4e0-a851-012e-f033-00ff815e7d15_t0.jpg" />
+    <ignored path="public/library/2009-7/3c3bc9f0-a851-012e-f031-00ff815e7d15/3c3bc9f0-a851-012e-f031-00ff815e7d15_t9.jpg" />
+    <ignored path="public/library/2009-7/3c78d4e0-a851-012e-f033-00ff815e7d15/3c78d4e0-a851-012e-f033-00ff815e7d15_t6.jpg" />
+    <ignored path="public/library/2009-7/3c78d4e0-a851-012e-f033-00ff815e7d15/3c78d4e0-a851-012e-f033-00ff815e7d15_t5.jpg" />
+    <ignored path="public/library/2009-7/3c78d4e0-a851-012e-f033-00ff815e7d15/3c78d4e0-a851-012e-f033-00ff815e7d15_t4.jpg" />
+    <ignored path="public/library/2009-7/3c78d4e0-a851-012e-f033-00ff815e7d15/3c78d4e0-a851-012e-f033-00ff815e7d15_t3.jpg" />
+    <ignored path="public/library/2009-7/3c3bc9f0-a851-012e-f031-00ff815e7d15/3c3bc9f0-a851-012e-f031-00ff815e7d15_t4.jpg" />
+    <ignored path="public/library/2009-7/3c3bc9f0-a851-012e-f031-00ff815e7d15/3c3bc9f0-a851-012e-f031-00ff815e7d15_t2.jpg" />
+    <ignored path="public/library/2009-7/3c3bc9f0-a851-012e-f031-00ff815e7d15/3c3bc9f0-a851-012e-f031-00ff815e7d15_t1.jpg" />
+    <ignored path="public/library/2009-7/3c3bc9f0-a851-012e-f031-00ff815e7d15/3c3bc9f0-a851-012e-f031-00ff815e7d15.wmv" />
+    <ignored path="public/library/2009-7/3c3bc9f0-a851-012e-f031-00ff815e7d15/3c3bc9f0-a851-012e-f031-00ff815e7d15_t8.jpg" />
+    <ignored path="public/library/2009-7/3c3bc9f0-a851-012e-f031-00ff815e7d15/3c3bc9f0-a851-012e-f031-00ff815e7d15_t7.jpg" />
+    <ignored path="public/library/2009-7/3c3bc9f0-a851-012e-f031-00ff815e7d15/3c3bc9f0-a851-012e-f031-00ff815e7d15_t6.jpg" />
+    <ignored path="public/library/2009-7/3c3bc9f0-a851-012e-f031-00ff815e7d15/3c3bc9f0-a851-012e-f031-00ff815e7d15_t5.jpg" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -640,7 +712,7 @@
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Optimizing fetch" />
+    <option name="LAST_COMMIT_MESSAGE" value="Optimizing library folder" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -676,6 +748,7 @@
     <MESSAGE value="Fixed the dynamic scroll loading" />
     <MESSAGE value="Removed idea folder" />
     <MESSAGE value="Optimizing fetch" />
+    <MESSAGE value="Optimizing library folder" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
