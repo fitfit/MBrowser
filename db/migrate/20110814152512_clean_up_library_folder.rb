@@ -6,7 +6,9 @@ class CleanUpLibraryFolder < ActiveRecord::Migration
         date = File.stat(filepath).mtime
         dirpath = "public/library/#{date.year}-#{date.month}/#{m.system_file.name}/"
         newfilepath = dirpath + m.system_file.name + "." + m.system_file.file_type
-        FileUtils.mkdir_p dirpath
+        unless File.exist?(dirpath)
+          FileUtils.mkdir_p dirpath
+        end
         FileUtils.mv(filepath,newfilepath)
         m.system_file.path = newfilepath
         m.system_file.save
