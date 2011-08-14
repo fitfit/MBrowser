@@ -4,7 +4,6 @@
     <list default="true" id="b8a98e3f-1060-4f79-b505-8dc70d58a075" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/movies_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/movies_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/logs/_accordion_report.erb" afterPath="$PROJECT_DIR$/app/views/logs/_accordion_report.erb" />
     </list>
     <ignored path="MBrowser7.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,15 +45,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/movies/new.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
@@ -64,10 +54,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="movies_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="movies_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/movies_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="23" selection-start="1133" selection-end="1133" vertical-scroll-proportion="0.0">
+            <state line="23" column="11" selection-start="699" selection-end="699" vertical-scroll-proportion="0.65604025">
               <folding />
             </state>
           </provider>
@@ -100,10 +90,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_accordion_report.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_accordion_report.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/logs/_accordion_report.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="52" selection-start="902" selection-end="902" vertical-scroll-proportion="0.12280702">
+            <state line="32" column="52" selection-start="902" selection-end="902" vertical-scroll-proportion="-2.6923077">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="row.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/movies/row.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="10" selection-start="3" selection-end="10" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_thumbnails.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/movies/_thumbnails.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="48" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -159,8 +167,8 @@
         <option value="$PROJECT_DIR$/app/views/movies/_thumbnails.erb" />
         <option value="$PROJECT_DIR$/app/views/navigation/_right_column.erb" />
         <option value="$PROJECT_DIR$/README" />
-        <option value="$PROJECT_DIR$/app/controllers/movies_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/logs/_accordion_report.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/movies_controller.rb" />
       </list>
     </option>
   </component>
@@ -647,7 +655,7 @@
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed idea folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="Optimizing fetch" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -682,16 +690,12 @@
     <MESSAGE value="Fixing stuff, taggin room etc" />
     <MESSAGE value="Fixed the dynamic scroll loading" />
     <MESSAGE value="Removed idea folder" />
+    <MESSAGE value="Optimizing fetch" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/tagging_room/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="20" selection-start="4014" selection-end="4014" vertical-scroll-proportion="3.4744525" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/movie.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="83" column="24" selection-start="2413" selection-end="2413" vertical-scroll-proportion="0.0" />
@@ -705,11 +709,6 @@
     <entry file="file://$PROJECT_DIR$/app/views/movies/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="34" selection-start="701" selection-end="701" vertical-scroll-proportion="-1.2424242" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/movies/row.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="46" selection-start="715" selection-end="736" vertical-scroll-proportion="0.6060606" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/movies/new.html.erb">
@@ -745,23 +744,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/movies/_thumbnails.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="48" selection-start="99" selection-end="99" vertical-scroll-proportion="0.057724956">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/views_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="29" selection-start="349" selection-end="349" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/movies_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="23" selection-start="1133" selection-end="1133" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/movies/_movie.erb">
@@ -780,7 +765,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/logs/_accordion_report.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="52" selection-start="902" selection-end="902" vertical-scroll-proportion="0.12280702">
+        <state line="32" column="52" selection-start="902" selection-end="902" vertical-scroll-proportion="-2.6923077">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/movies/_thumbnails.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="48" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/view.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="23" selection-start="533" selection-end="533" vertical-scroll-proportion="0.42785236">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/movies/row.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="10" selection-start="3" selection-end="10" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/movies_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="11" selection-start="699" selection-end="699" vertical-scroll-proportion="0.65604025">
           <folding />
         </state>
       </provider>
